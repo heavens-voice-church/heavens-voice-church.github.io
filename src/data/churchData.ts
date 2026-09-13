@@ -51,7 +51,7 @@ export const churchOfferingAccounts: OfferingAccount[] = [
 export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',
   englishName: "Heaven's voice Church",
-  domainName: 'hschurch.github.io',
+  domainName: 'heavens-voice-church.github.io',
   slogan: '신앙은 복음적이고, 생명은 풍성하며, 삶은 거룩하게',
   subSlogan: '기독교대한복음교회 교단 정신에 따라 오직 성경과 복음의 진리 위에 서는 교회',
   denomination: '기독교대한복음교회',
