@@ -138,7 +138,7 @@ export const worshipSchedules: WorshipSchedule[] = [
     id: 'worship-afternoon',
     category: 'afternoon',
     name: '주일 오후 예배',
-    dayTime: '매주 주일 오후 02:00',
+    dayTime: '매주 주일 오후 01:30',
     isOnlineLive: true,
     description: '말씀의 깊은 은혜를 나누고 뜨거운 찬양과 합심 기도로 한 주간 세상으로 나아갈 영적 능력을 공급받는 예배입니다.',
     orderSummary: [

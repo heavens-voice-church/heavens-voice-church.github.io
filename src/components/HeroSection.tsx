@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </div>
               <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('worship')}>
                 <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">주일 오후 예배</p>
-                <p className="text-sm font-bold text-slate-900 mt-1">오후 02:00</p>
+                <p className="text-sm font-bold text-slate-900 mt-1">오후 01:30</p>
                 <p className="text-[11px] text-sky-600 font-medium">하늘소리교회 예배당</p>
               </div>
               <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('location')}>
@@ -61,7 +61,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               {/* Image Preview */}
               <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-cover bg-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}church-main.jpg`}
+                  src={`${import.meta.env.BASE_URL}church.jpg`}
                   alt="하늘소리교회 예배당 전경"
                   className="w-full h-full object-cover brightness-95 hover:scale-105 transition-transform duration-700"
                 />

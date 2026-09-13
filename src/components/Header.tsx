@@ -3,7 +3,6 @@ import { churchInfo } from '../data/churchData';
 import {
   Menu,
   X,
-  Church,
   Clock,
   MapPin,
   Image as ImageIcon,
@@ -21,6 +20,23 @@ interface HeaderProps {
   activeTab: string;
   onSelectTab: (tabId: string) => void;
 }
+
+export const ChurchMark: React.FC<{ className?: string }> = ({ className }) => (
+  <svg
+    viewBox="0 0 32 32"
+    fill="none"
+    className={className}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M11 2.5V10.5M8 5.5H14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    <path d="M2.5 18L11 10.5L17.8 16.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 18.5L23 13L30 18.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M3 18V26.5H29.5V18.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M16 18.5V26.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    <path d="M7.5 26.5V21C7.5 20.2 8.2 19.5 9 19.5H10.5C11.3 19.5 12 20.2 12 21V26.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    <rect x="20" y="19" width="6" height="4.5" rx="0.8" stroke="currentColor" strokeWidth="1.4" />
+  </svg>
+);
 
 export const Header: React.FC<HeaderProps> = ({
   activeTab,
@@ -93,7 +109,7 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex items-center space-x-3 text-left group cursor-pointer"
           >
             <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center shadow-xs text-white group-hover:bg-sky-600 transition-colors">
-              <Church className="w-5 h-5 text-white" />
+              <ChurchMark className="w-8 h-8 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2">
