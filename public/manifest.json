@@ -1,0 +1,23 @@
+{
+  "name": "하늘소리교회",
+  "short_name": "하늘소리교회",
+  "description": "기독교대한복음교회 하늘소리교회 공식 웹페이지",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

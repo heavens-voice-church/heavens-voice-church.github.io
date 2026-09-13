@@ -1,0 +1,18 @@
+# robots.txt for https://hschurch.github.io/
+User-agent: *
+Allow: /
+
+# Specific search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://hschurch.github.io/sitemap.xml
