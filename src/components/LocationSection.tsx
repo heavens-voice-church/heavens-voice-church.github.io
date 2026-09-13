@@ -27,7 +27,6 @@ type KakaoMapStatus = 'loading' | 'ready' | 'error' | 'missing-key';
 
 export const LocationSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const [showTraffic, setShowTraffic] = useState(false);
   const [mapStatus, setMapStatus] = useState<KakaoMapStatus>('loading');
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<any>(null);
@@ -59,7 +58,6 @@ export const LocationSection: React.FC = () => {
   const churchCoords = { lat: 37.72807215105674, lng: 126.55904540088451 };
   const kakaoMapToUrl = `https://map.kakao.com/link/to/하늘소리교회,${churchCoords.lat},${churchCoords.lng}`;
   const kakaoMapDirectUrl = `https://map.kakao.com/link/map/하늘소리교회,${churchCoords.lat},${churchCoords.lng}`;
-  const kakaoRoadviewUrl = `https://map.kakao.com/link/roadview/${churchCoords.lat},${churchCoords.lng}`;
 
   // Kakao Maps JavaScript SDK: load the script once, then initialize the real map.
   useEffect(() => {
@@ -116,17 +114,6 @@ export const LocationSection: React.FC = () => {
     document.head.appendChild(script);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // Toggle the live Kakao traffic overlay on top of the real map.
-  useEffect(() => {
-    if (mapStatus !== 'ready' || !mapInstanceRef.current || !window.kakao) return;
-    const { TRAFFIC } = window.kakao.maps.MapTypeId;
-    if (showTraffic) {
-      mapInstanceRef.current.addOverlayMapTypeId(TRAFFIC);
-    } else {
-      mapInstanceRef.current.removeOverlayMapTypeId(TRAFFIC);
-    }
-  }, [showTraffic, mapStatus]);
 
   return (
     <div id="location" className="py-12 sm:py-16 bg-white text-slate-800">
@@ -259,23 +246,21 @@ export const LocationSection: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-1.5">
+                {/*
                 <button
-                  onClick={() => setShowTraffic(!showTraffic)}
-                  className={`px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-colors cursor-pointer ${
-                    showTraffic ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300 hover:text-white'
-                  }`}
+                  disabled
+                  className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-500 cursor-not-allowed opacity-60"
                 >
                   교통정보
                 </button>
-                <a
-                  href={kakaoRoadviewUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-300 hover:text-white transition-colors flex items-center gap-1"
+                <button
+                  disabled
+                  className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-500 cursor-not-allowed opacity-60 flex items-center gap-1"
                 >
-                  <Eye className="w-3 h-3 text-[#FEE500]" />
+                  <Eye className="w-3 h-3 text-slate-500" />
                   <span>로드뷰</span>
-                </a>
+                </button>
+                */}
               </div>
             </div>
 
