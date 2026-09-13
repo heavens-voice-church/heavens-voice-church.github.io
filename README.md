@@ -1,6 +1,6 @@
-# 하늘소리교회 (Heaven's Voice Church) 웹페이지
+# 하늘소리교회 (Heaven's Voice Church) 
 
-기독교대한복음교회 하늘소리교회 공식 웹사이트 프로젝트입니다.
+기독교대한복음교회 하늘소리교회 공식 웹사이트 Repository입니다.
 
 ## 🛠️ 기술 스택
 - **프레임워크**: React 19, TypeScript
