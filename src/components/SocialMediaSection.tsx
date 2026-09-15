@@ -1,5 +1,5 @@
 import React from 'react';
-import { churchInfo } from '../data/churchData';
+import { churchInfo, getWorshipTimeLabel, getWorshipClockTime } from '../data/churchData';
 import { Youtube, Instagram, Play, ExternalLink, Radio, Tv, Camera, Sparkles, Heart } from 'lucide-react';
 
 export const SocialMediaSection: React.FC = () => {
@@ -43,14 +43,14 @@ export const SocialMediaSection: React.FC = () => {
               </div>
 
               <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                매주 <strong className="text-slate-800">주일 오전 예배(11:00) 및 주일 오후 예배(14:00)</strong>를 유튜브 실시간 라이브 스트리밍으로 함께 송출합니다. 지난 주일 설교와 성경 강해 영상도 시청하실 수 있습니다.
+                매주 <strong className="text-slate-800">주일 오전 예배({getWorshipClockTime('morning')}) 및 주일 오후 예배({getWorshipClockTime('afternoon')})</strong>를 유튜브 실시간 라이브 스트리밍으로 함께 송출합니다. 지난 주일 설교와 성경 강해 영상도 시청하실 수 있습니다.
               </p>
 
               {/* Feature Highlights */}
               <div className="space-y-2.5 mb-8">
                 <div className="flex items-center gap-2.5 text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
                   <Tv className="w-4 h-4 text-red-600 shrink-0" />
-                  <span>주일 오전 11:00 / 오후 02:00 실시간 온라인 예배 생중계</span>
+                  <span>주일 {getWorshipTimeLabel('morning')} / {getWorshipTimeLabel('afternoon')} 실시간 온라인 예배 생중계</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
                   <Play className="w-4 h-4 text-red-600 shrink-0" />

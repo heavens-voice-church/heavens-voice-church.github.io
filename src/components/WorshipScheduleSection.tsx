@@ -2,17 +2,11 @@ import React from 'react';
 import { worshipSchedules, churchInfo } from '../data/churchData';
 import {
   Clock,
-  Tv,
   MapPin,
-  Users,
-  Heart,
   ChevronRight,
   Radio,
-  ExternalLink,
   BookOpen,
-  CalendarCheck,
-  CheckCircle2,
-  Sparkles
+  CalendarCheck
 } from 'lucide-react';
 
 interface WorshipScheduleSectionProps {

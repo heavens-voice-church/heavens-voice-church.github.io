@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { churchInfo } from '../data/churchData';
+import { churchInfo, getWorshipTimeLabel } from '../data/churchData';
 import {
   Menu,
   X,
-  Clock,
-  MapPin,
-  Image as ImageIcon,
-  Heart,
-  User,
-  Bell,
   Navigation,
-  ExternalLink,
   ChevronRight,
   Phone,
-  Youtube
+  Youtube 
 } from 'lucide-react';
 
 interface HeaderProps {
@@ -59,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'worship', label: '예배 시간 안내' },
     { id: 'location', label: '교회 위치' },
     { id: 'offering', label: '헌금 안내' },
-    { id: 'channel', label: '교회 SNS 채널' },
+    // { id: 'channel', label: '교회 SNS 채널' },
   ];
 
   const handleTabClick = (id: string) => {
@@ -80,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
             </span>
             <span className="text-white font-medium flex items-center">
               <span className="w-2 h-2 rounded-full bg-sky-400 inline-block mr-1.5 animate-pulse" />
-              주일 오전 11:00 / 오후 02:00
+              주일 {getWorshipTimeLabel('morning')} / {getWorshipTimeLabel('afternoon')}
             </span>
             <span className="hidden md:inline-block text-slate-600">|</span>
             <a
@@ -180,7 +173,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* Mobile Actions */}
             <div className="mt-4 pt-3 border-t border-slate-200 grid grid-cols-2 gap-2">
-              <a
+              {/* <a
                 href={churchInfo.youtubeChannel}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -188,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <Youtube className="w-4 h-4 text-red-600" />
                 <span>유튜브 채널</span>
-              </a>
+              </a> */}
               <a
                 href={kakaoMapToUrl}
                 target="_blank"

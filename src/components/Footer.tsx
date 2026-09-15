@@ -2,15 +2,10 @@ import React from 'react';
 import { churchInfo } from '../data/churchData';
 import { ChurchMark } from './Header';
 import {
-  Heart,
   Phone,
   Mail,
   MapPin,
-  Youtube,
-  Instagram,
-  ArrowUp,
-  ShieldCheck,
-  Clock
+  ArrowUp
 } from 'lucide-react';
 
 interface FooterProps {
@@ -106,14 +101,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   • 찾아오시는 길 & 연락처
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => onSelectTab('channel')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   • SNS 채널
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
 

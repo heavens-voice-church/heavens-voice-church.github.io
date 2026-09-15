@@ -10,9 +10,7 @@ import {
   FileText,
   Smartphone,
   ShieldCheck,
-  Sparkles,
-  Info,
-  Phone
+  Info
 } from 'lucide-react';
 
 export const OnlineOfferingSection: React.FC = () => {

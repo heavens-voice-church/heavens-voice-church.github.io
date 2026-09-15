@@ -3,7 +3,6 @@ import { churchInfo } from '../data/churchData';
 import {
   MapPin,
   Navigation,
-  Train,
   Bus,
   Car,
   Copy,
@@ -12,11 +11,7 @@ import {
   Clock,
   Mail,
   ExternalLink,
-  ShieldCheck,
   Building2,
-  Calendar,
-  Eye,
-  MessageSquare,
   Loader2,
   AlertTriangle
 } from 'lucide-react';
@@ -25,7 +20,12 @@ const KAKAO_SDK_SCRIPT_ID = 'kakao-maps-sdk';
 
 type KakaoMapStatus = 'loading' | 'ready' | 'error' | 'missing-key';
 
-export const LocationSection: React.FC = () => {
+interface LocationSectionProps {
+  /** Whether this tab is the one currently visible to the user. */
+  isActive: boolean;
+}
+
+export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) => {
   const [copied, setCopied] = useState(false);
   const [mapStatus, setMapStatus] = useState<KakaoMapStatus>('loading');
   const mapContainerRef = useRef<HTMLDivElement>(null);
@@ -60,7 +60,11 @@ export const LocationSection: React.FC = () => {
   const kakaoMapDirectUrl = `https://map.kakao.com/link/map/하늘소리교회,${churchCoords.lat},${churchCoords.lng}`;
 
   // Kakao Maps JavaScript SDK: load the script once, then initialize the real map.
+  // Gated on `isActive` because this section now stays mounted (hidden) even when the
+  // user is on another tab, so the SDK/map must not load into a zero-size hidden container.
   useEffect(() => {
+    if (!isActive || mapInstanceRef.current) return;
+
     const appKey = import.meta.env.VITE_KAKAO_MAP_APP_KEY;
     if (!appKey) {
       setMapStatus('missing-key');
@@ -113,7 +117,7 @@ export const LocationSection: React.FC = () => {
     script.onerror = () => setMapStatus('error');
     document.head.appendChild(script);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isActive]);
 
   return (
     <div id="location" className="py-12 sm:py-16 bg-white text-slate-800">

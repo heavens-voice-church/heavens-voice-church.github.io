@@ -152,6 +152,19 @@ export const worshipSchedules: WorshipSchedule[] = [
   }
 ];
 
+// Single source of truth for displaying worship times elsewhere (Header, SocialMediaSection, etc.)
+// so the schedule never drifts out of sync with worshipSchedules above.
+const getSchedule = (category: WorshipSchedule['category']): WorshipSchedule =>
+  worshipSchedules.find((w) => w.category === category)!;
+
+/** e.g. '오전 11:00' / '오후 01:30' */
+export const getWorshipTimeLabel = (category: WorshipSchedule['category']): string =>
+  getSchedule(category).dayTime.replace('매주 주일 ', '');
+
+/** e.g. '11:00' / '01:30' */
+export const getWorshipClockTime = (category: WorshipSchedule['category']): string =>
+  getSchedule(category).dayTime.match(/\d{1,2}:\d{2}/)?.[0] ?? '';
+
 // export const defaultCuratedPhotos: ChurchPhoto[] = [
 //   {
 //     id: 'photo-1',
