@@ -88,9 +88,9 @@ export const ChurchIntroSection: React.FC = () => {
                     {pillar.title}
                   </h4>
 
-                  <p className="text-xs text-slate-600 leading-relaxed">
+                  {/* <p className="text-xs text-slate-600 leading-relaxed">
                     {pillar.description}
-                  </p>
+                  </p> */}
                 </div>
 
                 <div className="pt-4 mt-4 border-t border-slate-100 space-y-1.5">

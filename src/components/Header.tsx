@@ -50,6 +50,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'intro', label: '교회 소개' },
     { id: 'pastor', label: '담임 목사 소개' },
     { id: 'worship', label: '예배 시간 안내' },
+    { id: 'gallery', label: '사진 갤러리' },
     { id: 'location', label: '교회 위치' },
     { id: 'offering', label: '헌금 안내' },
     // { id: 'channel', label: '교회 SNS 채널' },

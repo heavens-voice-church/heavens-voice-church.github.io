@@ -86,19 +86,26 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               </li>
               <li>
                 <button
-                  onClick={() => onSelectTab('offering')}
+                  onClick={() => onSelectTab('gallery')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  • 온라인 헌금 안내
+                  • 사진 갤러리
                 </button>
               </li>
-
               <li>
                 <button
                   onClick={() => onSelectTab('location')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   • 찾아오시는 길 & 연락처
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onSelectTab('offering')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  • 온라인 헌금 안내
                 </button>
               </li>
               {/* <li>

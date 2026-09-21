@@ -9,14 +9,18 @@ import { HeroSection } from './components/HeroSection';
 import { ChurchIntroSection } from './components/ChurchIntroSection';
 import { PastorSection } from './components/PastorSection';
 import { WorshipScheduleSection } from './components/WorshipScheduleSection';
+import { PhotoGallerySection } from './components/PhotoGallerySection';
+import { PhotoLightboxModal } from './components/PhotoLightboxModal';
 import { OnlineOfferingSection } from './components/OnlineOfferingSection';
 import { LocationSection } from './components/LocationSection';
 import { SocialMediaSection } from './components/SocialMediaSection';
 import { Footer } from './components/Footer';
+import { defaultCuratedPhotos } from './data/churchData';
+import { ChurchPhoto } from './types';
 import { trackPageView } from './utils/analytics';
 
 // Tab ids addressable via URL hash (e.g. '#worship'). 'home' has no hash.
-const HASH_TABS = ['intro', 'pastor', 'worship', 'offering', 'location', 'channel'];
+const HASH_TABS = ['intro', 'pastor', 'worship', 'gallery', 'offering', 'location', 'channel'];
 
 const getTabFromHash = (): string => {
   const hash = window.location.hash.replace(/^#/, '');
@@ -24,8 +28,12 @@ const getTabFromHash = (): string => {
 };
 
 export default function App() {
-  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'offering' | 'location' | 'channel'
+  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'gallery' | 'offering' | 'location' | 'channel'
   const [activeTab, setActiveTab] = useState<string>(getTabFromHash);
+  const [selectedPhoto, setSelectedPhoto] = useState<ChurchPhoto | null>(null);
+  const selectedPhotoIndex = selectedPhoto
+    ? defaultCuratedPhotos.findIndex((photo) => photo.id === selectedPhoto.id)
+    : -1;
 
   useEffect(() => {
     const initialTab = getTabFromHash();
@@ -108,7 +116,12 @@ export default function App() {
             <WorshipScheduleSection onNavigate={handleTabSelect} />
           </section>
 
-          {/* Tab 4: 온라인 헌금 */}
+          {/* Tab 4: 사진 갤러리 */}
+          <section hidden={activeTab !== 'gallery'}>
+            <PhotoGallerySection onSelectPhoto={setSelectedPhoto} />
+          </section>
+
+          {/* Tab 5: 온라인 헌금 */}
           <section hidden={activeTab !== 'offering'}>
             <OnlineOfferingSection />
           </section>
@@ -125,6 +138,16 @@ export default function App() {
 
         </div>
       </main>
+
+      {/* Photo Lightbox */}
+      <PhotoLightboxModal
+        photo={selectedPhoto}
+        onClose={() => setSelectedPhoto(null)}
+        onPrev={() => setSelectedPhoto(defaultCuratedPhotos[selectedPhotoIndex - 1])}
+        onNext={() => setSelectedPhoto(defaultCuratedPhotos[selectedPhotoIndex + 1])}
+        hasPrev={selectedPhotoIndex > 0}
+        hasNext={selectedPhotoIndex >= 0 && selectedPhotoIndex < defaultCuratedPhotos.length - 1}
+      />
 
       {/* Footer */}
       <Footer

@@ -1,47 +1,27 @@
 import {
   ChurchInfo,
   WorshipSchedule,
-  // ChurchPhoto,
+  ChurchPhoto,
   OfferingAccount
 } from '../types';
 
 export const churchOfferingAccounts: OfferingAccount[] = [
-  // {
-  //   id: 'offering-1',
-  //   category: '십일조 / 일반 주일헌금',
-  //   subtitle: '온전한 신앙 고백과 감사의 봉헌',
-  //   bank: '국민은행',
-  //   accountNumber: '535901-01-396982',
-  //   holder: '하늘소리교회',
-  //   description: '십일조 및 주일 예배 감사헌금 송금 전용 계좌입니다.',
-  //   recommendedFor: ['십일조', '주일헌금', '월정헌금']
-  // },
   {
-    id: 'offering-2',
+    id: 'offering-1',
     category: '감사헌금',
     subtitle: '범사에 베풀어주신 은혜에 대한 감사',
     bank: '국민은행',
-    accountNumber: '987-654321-02008',
+    accountNumber: '535901-01-396982',
     holder: '하늘소리교회',
     description: '생일, 승진, 회복, 범사감사 및 절기 감사헌금 전용 계좌입니다.',
-    recommendedFor: ['범사감사', '생일감사', '절기감사']
+    recommendedFor: ['범사감사','절기감사']
   },
-  // {
-  //   id: 'offering-3',
-  //   category: '선교 / 구제 / 장학헌금',
-  //   subtitle: '이웃을 섬기고 복음을 전하는 사랑의 나눔',
-  //   bank: '국민은행',
-  //   accountNumber: '535901-01-396982',
-  //   holder: '하늘소리교회선교부',
-  //   description: '국내외 선교지 후원 및 지역사회 소외 이웃 구제에 사용됩니다.',
-  //   recommendedFor: ['해외선교', '지역구제', '장학후원']
-  // },
   {
-    id: 'offering-4',
+    id: 'offering-2',
     category: '비전 / 시설 헌금',
     subtitle: '은혜의 예배 처소와 성전 가꾸기',
     bank: '국민은행',
-    accountNumber: '535901-01-396982',
+    accountNumber: '987-654321-02008',
     holder: '하늘소리교회',
     description: '예배당 환경 개선 및 복음 사역을 위한 목적 헌금입니다.',
     recommendedFor: ['성전가꾸기', '비전헌금']
@@ -59,7 +39,7 @@ export const churchInfo: ChurchInfo = {
     name: '유숙연 목사',
     title: '담임목사',
     denomination: '기독교대한복음교회',
-    greetingTitle: '오직 복음의 진리 안에서 자유와 생명을 누리는 신앙 공동체에 오신 것을 환영합니다.',
+    greetingTitle: '복음의 진리 안에서 자유와 생명을 누리는 신앙 공동체에 오신 것을 환영합니다.',
     greetingMessage: [
       '하늘소리교회 웹페이지를 찾아주신 모든 성도님과 방문자 여러분을 주님의 이름으로 진심으로 환영하고 축복합니다.',
       '기독교대한복음교회는 "신앙은 복음적이고 생명적이어라, 신학은 충분히 학문적이어라, 교회는 한국인 자신의 교회이어라"라는 자랑스러운 3대 표어 위에 서 있습니다.',
@@ -81,15 +61,21 @@ export const churchInfo: ChurchInfo = {
       }
     ],
     education: [
-      '복음총회신학원 목회학 석사(M.Div)',
-      '연세대학교 연합신학대학원 신학 석사(Th.M)',
-      '기독교대한복음교회 목사 안수',
-      '현) 기독교대한복음교회 하늘소리교회 담임목사'
+      '25년간 목사의 아내로 교우와 지역주민 돌봄 사역',
+      '이화여자대학교 신학대학원 졸업(Th.M)',
+      '연세의료원 신촌세브란스병원 원목실 목사로 환우와 직원 돌봄 사역',
+      '(전) (주)쓰리제이 사목으로 직장인 돌봄 사역',
+      '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사로 사역',
+      '(현) 기독교대한복음교회 소속 목사',
+      '(현) 한국임상목회교육협회(KCPE) 수퍼바이저',
+      '(현) 한국목회상담협회(KAPC) 상담사, 소울프렌드 소속 상담사',
+      '(현) 목회자유가족협의회 이사',
+      '(현) 하늘봄센터 대표'
     ],
     photoUrl: `${import.meta.env.BASE_URL}church-main.jpg`,
     bibleVerse: {
-      verse: '진리를 알지니 진리가 너희를 자유롭게 하리라',
-      reference: '요한복음 8장 32절'
+      verse: '기뻐하는 사람들과 함께 기뻐하고, 우는 사람들과 함께 우십시오',
+      reference: '로마서 12장 15절(새번역)'
     }
   },
   address: '경기도 김포시 용강로 100',
@@ -165,41 +151,41 @@ export const getWorshipTimeLabel = (category: WorshipSchedule['category']): stri
 export const getWorshipClockTime = (category: WorshipSchedule['category']): string =>
   getSchedule(category).dayTime.match(/\d{1,2}:\d{2}/)?.[0] ?? '';
 
-// export const defaultCuratedPhotos: ChurchPhoto[] = [
-//   {
-//     id: 'photo-1',
-//     title: '하늘소리교회 예배당 전경',
-//     category: 'fellowship',
-//     categoryLabel: '성도의 교제 & 전경',
-//     url: '/church-main.jpg',
-//     date: '2024.08',
-//     description: '김포 문수산 자락 아래 자리 잡은 아름다운 하늘소리교회 예배당 전경입니다.'
-//   },
-//   {
-//     id: 'photo-2',
-//     title: '주일 오전 예배 찬양과 기도',
-//     category: 'worship',
-//     categoryLabel: '주일 예배',
-//     url: '/church-main.jpg',
-//     date: '2024.08',
-//     description: '하나님의 임재를 사모하며 영과 진리로 올려드리는 경건한 예배의 순간입니다.'
-//   },
-//   {
-//     id: 'photo-3',
-//     title: '성도들의 따뜻한 교제',
-//     category: 'fellowship',
-//     categoryLabel: '성도의 교제 & 전경',
-//     url: '/church-main.jpg',
-//     date: '2024.07',
-//     description: '예배 후 서로를 축복하고 사랑으로 섬기는 하늘소리 공동체의 모습입니다.'
-//   },
-//   {
-//     id: 'photo-4',
-//     title: '교단 및 특별 연합 행사',
-//     category: 'season',
-//     categoryLabel: '교단 및 특별행사',
-//     url: '/church-main.jpg',
-//     date: '2024.06',
-//     description: '기독교대한복음교회 복음 정신을 되새기며 복음 전파를 다짐하는 특별 집회입니다.'
-//   }
-// ];
+export const defaultCuratedPhotos: ChurchPhoto[] = [
+  {
+    id: 'photo-1',
+    title: '하늘소리교회 예배당 전경',
+    category: 'fellowship',
+    categoryLabel: '성도의 교제 & 전경',
+    url: `${import.meta.env.BASE_URL}church-main.jpg`,
+    date: '2024.08',
+    description: '김포 문수산 자락 아래 자리 잡은 아름다운 하늘소리교회 예배당 전경입니다.'
+  },
+  {
+    id: 'photo-2',
+    title: '주일 오전 예배 찬양과 기도',
+    category: 'worship',
+    categoryLabel: '주일 예배',
+    url: `${import.meta.env.BASE_URL}church-main.jpg`,
+    date: '2024.08',
+    description: '하나님의 임재를 사모하며 영과 진리로 올려드리는 경건한 예배의 순간입니다.'
+  },
+  {
+    id: 'photo-3',
+    title: '성도들의 따뜻한 교제',
+    category: 'fellowship',
+    categoryLabel: '성도의 교제 & 전경',
+    url: `${import.meta.env.BASE_URL}church-main.jpg`,
+    date: '2024.07',
+    description: '예배 후 서로를 축복하고 사랑으로 섬기는 하늘소리 공동체의 모습입니다.'
+  },
+  {
+    id: 'photo-4',
+    title: '교단 및 특별 연합 행사',
+    category: 'season',
+    categoryLabel: '교단 및 특별행사',
+    url: `${import.meta.env.BASE_URL}church-main.jpg`,
+    date: '2024.06',
+    description: '기독교대한복음교회 복음 정신을 되새기며 복음 전파를 다짐하는 특별 집회입니다.'
+  }
+];

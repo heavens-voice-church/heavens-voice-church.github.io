@@ -24,12 +24,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             {/* Main Catchphrase */}
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-slate-900 font-serif-kr leading-[1.25]">
-                하늘의 소리로<br />
-                <span className="text-sky-600">세상을 치유하는 복음공동체</span>
+                은혜의 50년<br />
+                <span className="text-sky-600">하늘소리, 세상의 빛이어라</span>
               </h1>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-                {churchInfo.subSlogan}.
-                {/* 예수 그리스도의 참된 복음과 생명의 말씀 안에서 하나님을 경외하고 서로를 품는 따뜻한 신앙의 보금자리입니다. */}
+                복음의 말씀과 사랑과 위로가 가득한 공동체, 하늘소리교회에 여러분을 초대합니다
               </p>
             </div>
 
@@ -38,12 +37,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             {/* Quick Feature Grid */}
             <div className="pt-8 border-t border-slate-200 grid grid-cols-3 gap-6 text-left">
               <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('worship')}>
-                <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">주일 오전 예배</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">주일 예배</p>
                 <p className="text-sm font-bold text-slate-900 mt-1">{getWorshipTimeLabel('morning')}</p>
                 <p className="text-[11px] text-sky-600 font-medium">하늘소리교회 예배당</p>
               </div>
               <div className="cursor-pointer hover:opacity-80 transition-opacity" onClick={() => onNavigate('worship')}>
-                <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">주일 오후 예배</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider font-semibold">성경읽기와 중보기도</p>
                 <p className="text-sm font-bold text-slate-900 mt-1">{getWorshipTimeLabel('afternoon')}</p>
                 <p className="text-[11px] text-sky-600 font-medium">하늘소리교회 예배당</p>
               </div>

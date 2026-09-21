@@ -88,7 +88,7 @@ export const PastorSection: React.FC = () => {
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-xs text-sky-300 font-semibold">
                     <GraduationCap className="w-4 h-4 text-sky-400" />
-                    <span>담임목사 학력 및 약력</span>
+                    <span>담임목사 소개</span>
                   </div>
                   <ul className="text-xs text-slate-300 space-y-0.5">
                     {churchInfo.pastor.education.map((edu, idx) => (
@@ -98,11 +98,6 @@ export const PastorSection: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="flex items-center gap-2 text-xs text-sky-200 bg-sky-900/60 px-4 py-2.5 rounded-xl border border-sky-600/50 shrink-0">
-                  <ShieldCheck className="w-4 h-4 text-sky-400" />
-                  <span>기독교대한복음교회 총회 정회원</span>
                 </div>
               </div>
             </div>

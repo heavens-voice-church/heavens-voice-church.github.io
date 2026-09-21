@@ -8,15 +8,15 @@ export interface WorshipSchedule {
   orderSummary?: string[];
 }
 
-// export interface ChurchPhoto {
-//   id: string;
-//   title: string;
-//   category: 'worship' | 'fellowship' | 'season';
-//   categoryLabel: string;
-//   url: string;
-//   date: string;
-//   description?: string;
-// }
+export interface ChurchPhoto {
+  id: string;
+  title: string;
+  category: 'worship' | 'fellowship' | 'season';
+  categoryLabel: string;
+  url: string;
+  date: string;
+  description?: string;
+}
 
 export interface OfferingAccount {
   id: string;
