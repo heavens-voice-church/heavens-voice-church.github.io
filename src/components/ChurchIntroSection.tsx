@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo } from '../data/churchData';
-import { ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, CheckCircle2 } from './icons';
 
 export const ChurchIntroSection: React.FC = () => {
   const gospelCoreValues = [

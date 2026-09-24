@@ -14,7 +14,7 @@ import {
   Building2,
   Loader2,
   AlertTriangle
-} from 'lucide-react';
+} from './icons';
 
 const KAKAO_SDK_SCRIPT_ID = 'kakao-maps-sdk';
 

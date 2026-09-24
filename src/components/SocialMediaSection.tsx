@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, getWorshipTimeLabel, getWorshipClockTime } from '../data/churchData';
-import { Youtube, Instagram, Play, ExternalLink, Radio, Tv, Camera, Sparkles, Heart } from 'lucide-react';
+import { Youtube, Instagram, Play, ExternalLink, Radio, Tv, Camera, Sparkles, Heart } from './icons';
 
 export const SocialMediaSection: React.FC = () => {
   return (

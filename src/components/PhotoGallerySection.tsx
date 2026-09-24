@@ -8,7 +8,7 @@ import {
   Calendar,
   Camera,
   Filter
-} from 'lucide-react';
+} from './icons';
 
 interface PhotoGallerySectionProps {
   onSelectPhoto: (photo: ChurchPhoto) => void;

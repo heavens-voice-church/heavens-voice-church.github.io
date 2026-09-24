@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo } from '../data/churchData';
-import { Award, BookOpen, Quote, ShieldCheck, GraduationCap } from 'lucide-react';
+import { Award, BookOpen, Quote, ShieldCheck, GraduationCap } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (

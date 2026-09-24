@@ -7,7 +7,7 @@ import {
   ChevronRight,
   Phone,
   Youtube 
-} from 'lucide-react';
+} from './icons';
 
 interface HeaderProps {
   activeTab: string;

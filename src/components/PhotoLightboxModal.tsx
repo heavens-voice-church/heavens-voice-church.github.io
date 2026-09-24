@@ -6,7 +6,7 @@ import {
   ChevronRight,
   Calendar,
   ExternalLink
-} from 'lucide-react';
+} from './icons';
 
 interface PhotoLightboxModalProps {
   photo: ChurchPhoto | null;

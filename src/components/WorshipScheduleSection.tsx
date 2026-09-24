@@ -7,7 +7,7 @@ import {
   Radio,
   BookOpen,
   CalendarCheck
-} from 'lucide-react';
+} from './icons';
 
 interface WorshipScheduleSectionProps {
   onNavigate: (tabId: string) => void;

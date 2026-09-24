@@ -6,7 +6,7 @@ import {
   Mail,
   MapPin,
   ArrowUp
-} from 'lucide-react';
+} from './icons';
 
 interface FooterProps {
   onSelectTab: (tabId: string) => void;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, getWorshipTimeLabel } from '../data/churchData';
-import { BookOpen } from 'lucide-react';
+import { BookOpen } from './icons';
 
 interface HeroSectionProps {
   onNavigate: (sectionId: string) => void;

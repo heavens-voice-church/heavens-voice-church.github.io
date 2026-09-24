@@ -11,7 +11,7 @@ import {
   Smartphone,
   ShieldCheck,
   Info
-} from 'lucide-react';
+} from './icons';
 
 export const OnlineOfferingSection: React.FC = () => {
   const [copiedId, setCopiedId] = useState<string | null>(null);
