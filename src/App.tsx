@@ -1,6 +1,5 @@
 /**
- * @license
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2026 하늘소리교회. All Rights Reserved.
  */
 
 import { useState, useEffect } from 'react';
