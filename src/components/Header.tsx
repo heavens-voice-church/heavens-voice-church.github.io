@@ -49,7 +49,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'intro', label: '교회 소개' },
     { id: 'pastor', label: '담임 목사 소개' },
     { id: 'worship', label: '예배 시간 안내' },
-    { id: 'gallery', label: '사진 갤러리' },
+    // { id: 'gallery', label: '사진 갤러리' }, // temporarily disabled
     { id: 'location', label: '교회 위치' },
     { id: 'offering', label: '헌금 안내' },
     // { id: 'channel', label: '교회 SNS 채널' },
@@ -111,6 +111,12 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
               );
             })}
+            <a
+              href="/bible-ai/"
+              className="px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold transition-all whitespace-nowrap text-sky-600 hover:bg-sky-50"
+            >
+              AI 말씀 추천
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -146,6 +152,13 @@ export const Header: React.FC<HeaderProps> = ({
                   </button>
                 );
               })}
+              <a
+                href="/bible-ai/"
+                className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all text-left bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200"
+              >
+                <span>AI 말씀 추천</span>
+                <ChevronRight className="w-3.5 h-3.5 text-sky-400" />
+              </a>
             </div>
 
             {/* Mobile Actions */}

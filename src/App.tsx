@@ -8,7 +8,7 @@ import { HeroSection } from './components/HeroSection';
 import { ChurchIntroSection } from './components/ChurchIntroSection';
 import { PastorSection } from './components/PastorSection';
 import { WorshipScheduleSection } from './components/WorshipScheduleSection';
-import { PhotoGallerySection } from './components/PhotoGallerySection';
+// import { PhotoGallerySection } from './components/PhotoGallerySection'; // gallery temporarily disabled
 import { PhotoLightboxModal } from './components/PhotoLightboxModal';
 import { OnlineOfferingSection } from './components/OnlineOfferingSection';
 import { LocationSection } from './components/LocationSection';
@@ -19,7 +19,8 @@ import { ChurchPhoto } from './types';
 import { trackPageView } from './utils/analytics';
 
 // Tab ids addressable via URL hash (e.g. '#worship'). 'home' has no hash.
-const HASH_TABS = ['intro', 'pastor', 'worship', 'gallery', 'offering', 'location', 'channel'];
+// 'gallery' is temporarily disabled; add it back here, in Header navTabs, and in Footer to restore.
+const HASH_TABS = ['intro', 'pastor', 'worship', 'offering', 'location', 'channel'];
 
 const getTabFromHash = (): string => {
   const hash = window.location.hash.replace(/^#/, '');
@@ -117,10 +118,10 @@ export default function App() {
             <WorshipScheduleSection onNavigate={handleTabSelect} />
           </section>
 
-          {/* Tab 4: 사진 갤러리 */}
-          <section hidden={activeTab !== 'gallery'}>
+          {/* Tab 4: 사진 갤러리 (temporarily disabled) */}
+          {/* <section hidden={activeTab !== 'gallery'}>
             <PhotoGallerySection onSelectPhoto={setSelectedPhoto} />
-          </section>
+          </section> */}
 
           {/* Tab 5: 온라인 헌금 */}
           <section hidden={activeTab !== 'offering'}>
