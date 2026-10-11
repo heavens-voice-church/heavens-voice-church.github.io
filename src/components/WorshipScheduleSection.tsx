@@ -108,7 +108,7 @@ export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ 
             </div>
             <h4 className="text-base font-bold text-slate-900">예배 10분 전 기도로 준비</h4>
             <p className="text-xs text-slate-600 leading-relaxed">
-              예배 시작 10분 전에 도착하시어 기도로 마음을 정돈하고, 예배당 안내위원의 안내에 따라 앞자리부터 착석해 주시기 바랍니다.
+              예배 시작 10분 전에 도착하시어 기도로 마음을 정돈하고, 예배당 안내위원의 안내에 따라 착석해 주시기 바랍니다.
             </p>
           </div>
 

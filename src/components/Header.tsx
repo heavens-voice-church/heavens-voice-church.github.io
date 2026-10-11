@@ -52,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
     // { id: 'gallery', label: '사진 갤러리' }, // temporarily disabled
     { id: 'location', label: '교회 위치' },
     { id: 'offering', label: '헌금 안내' },
-    // { id: 'channel', label: '교회 SNS 채널' },
+    // { id: 'channel', label: '교회 SNS 채널' },  // temporarily disabled
   ];
 
   const handleTabClick = (id: string) => {

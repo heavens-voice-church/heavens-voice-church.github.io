@@ -14,21 +14,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
           {/* Main Hero Text (Left 7 Cols) */}
           <div className="lg:col-span-7 space-y-6 lg:space-y-0 text-left flex flex-col lg:justify-between lg:pb-2.5">
-            {/* Eyebrow / Catchphrase / Feature grid spaced evenly; badge pb-8 mirrors the grid's pt-8 so gaps match to the text */}
-            <div className="inline-flex items-center gap-2 lg:pb-8">
-              <span className="px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-[15px] tracking-wider">
+            {/* Eyebrow / Catchphrase / Feature grid spaced by justify-between; badge text, headline and subcopy share one left line (pill shifted by its padding+border) */}
+            <div className="inline-flex items-center gap-2">
+              <span className="-ml-[13px] px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-[15px] tracking-wider">
                 {churchInfo.denomination} · 김포 하늘소리교회
               </span>
             </div>
 
-            {/* Main Catchphrase */}
-            <div className="space-y-4">
+            {/* Main Catchphrase (lg:pb-8 nudges it up toward the badge within justify-between) */}
+            <div className="space-y-4 lg:pb-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] font-bold tracking-tighter text-slate-900 leading-[1.25]">
                 <span className="font-serif-kr">
-                  {/* invisible quote so "은" lines up with "하" after the opening quote below */}
-                  <span aria-hidden="true" className="invisible">"</span>
                   <span className="text-[length:calc(1em-2px)]">은혜의 50년</span><br />
-                  <span className="text-sky-600">"하늘소리, 세상의 빛이어라"</span>
+                  {/* opening quote hangs into the left gutter so "하" sits on the shared left line */}
+                  <span className="text-sky-600"><span className="absolute -translate-x-full">"</span>하늘소리, 세상의 빛이어라"</span>
                 </span>
               </h1>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
