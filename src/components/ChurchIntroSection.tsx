@@ -39,7 +39,7 @@ export const ChurchIntroSection: React.FC = () => {
             <ShieldCheck className="w-4 h-4 text-sky-500" />
             <span>{churchInfo.denomination} {churchInfo.name}</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             교회 소개 및 <span className="text-sky-600">3대 신앙 지침</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -49,7 +49,7 @@ export const ChurchIntroSection: React.FC = () => {
 
         {/* Core Values Card or Banner */}
         <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 text-center max-w-4xl mx-auto space-y-4">
-          <h3 className="text-lg sm:text-xl font-bold text-sky-700 font-serif-kr">
+          <h3 className="text-lg sm:text-xl font-bold text-sky-700">
             "{churchInfo.slogan}"
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
@@ -60,12 +60,9 @@ export const ChurchIntroSection: React.FC = () => {
         {/* Evangelical Church of Korea 3 Core Pillars */}
         <div className="space-y-6">
           <div className="text-center space-y-2">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-serif-kr">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
               기독교대한복음교회 3대 신앙 지침
             </h3>
-            <p className="text-slate-600 text-xs sm:text-sm">
-              하늘소리교회가 굳건히 지켜나가는 교단의 자랑스러운 3대 복음 표어입니다.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -80,11 +77,11 @@ export const ChurchIntroSection: React.FC = () => {
                       {pillar.number}
                     </span>
                     <span className="text-[11px] font-semibold text-sky-600 uppercase tracking-wider">
-                      {pillar.engTitle}
+                      {/* {pillar.engTitle} */}
                     </span>
                   </div>
 
-                  <h4 className="text-base font-bold text-slate-900 font-serif-kr">
+                  <h4 className="text-base font-bold text-slate-900">
                     {pillar.title}
                   </h4>
 
@@ -94,12 +91,12 @@ export const ChurchIntroSection: React.FC = () => {
                 </div>
 
                 <div className="pt-4 mt-4 border-t border-slate-100 space-y-1.5">
-                  {pillar.points.map((pt, pIdx) => (
+                  {/* {pillar.points.map((pt, pIdx) => (
                     <div key={pIdx} className="flex items-center gap-2 text-[11px] text-slate-700">
                       <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 shrink-0" />
                       <span>{pt}</span>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               </div>
             ))}

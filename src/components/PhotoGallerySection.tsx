@@ -47,7 +47,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
               <Camera className="w-3.5 h-3.5 text-sky-500" />
               <span>하늘소리 사진 갤러리</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
               하늘소리교회 <span className="text-sky-600">교회사진</span>
             </h2>
             <p className="text-slate-600 text-sm leading-relaxed break-keep md:whitespace-nowrap">
@@ -136,7 +136,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
                 {/* Photo Details */}
                 <div className="p-4 flex-1 flex flex-col justify-between text-left space-y-2">
                   <div>
-                    <h4 className="text-sm font-bold text-slate-900 line-clamp-1 group-hover:text-sky-600 transition-colors font-serif-kr">
+                    <h4 className="text-sm font-bold text-slate-900 line-clamp-1 group-hover:text-sky-600 transition-colors">
                       {photo.title}
                     </h4>
                     {photo.description && (

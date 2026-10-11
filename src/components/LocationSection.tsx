@@ -129,7 +129,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             <MapPin className="w-3.5 h-3.5 text-sky-500" />
             <span>오시는 길 & 교회 연락처</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회 <span className="text-sky-600">찾아오시는 길 & 연락처</span>
           </h2>
         </div>
@@ -194,7 +194,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
               <Building2 className="w-4 h-4 text-sky-300" />
               <span>교회 주소</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white font-serif-kr">
+            <h3 className="text-xl sm:text-2xl font-bold text-white">
               {churchInfo.address}
             </h3>
             <p className="text-xs sm:text-sm text-sky-100">
@@ -339,7 +339,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
 
             {/* Bus */}
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4 text-left">
-              <div className="flex items-center gap-2.5 text-slate-900 font-bold text-base font-serif-kr">
+              <div className="flex items-center gap-2.5 text-slate-900 font-bold text-base">
                 <div className="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
                   <Bus className="w-4 h-4" />
                 </div>
@@ -364,7 +364,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
 
             {/* Parking & Car */}
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3 text-left">
-              <div className="flex items-center gap-2.5 text-slate-900 font-bold text-base font-serif-kr">
+              <div className="flex items-center gap-2.5 text-slate-900 font-bold text-base">
                 <div className="w-9 h-9 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center">
                   <Car className="w-4 h-4" />
                 </div>

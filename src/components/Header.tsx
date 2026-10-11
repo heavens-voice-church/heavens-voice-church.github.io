@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { churchInfo, getWorshipTimeLabel } from '../data/churchData';
+import { churchInfo } from '../data/churchData';
 import {
   Menu,
   X,
   Navigation,
   ChevronRight,
-  Phone,
   Youtube 
 } from './icons';
 
@@ -65,29 +64,6 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 transition-all duration-300">
-      {/* Top Utility Bar */}
-      <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 sm:px-8 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
-          <div className="flex items-center space-x-3">
-            <span className="px-2 py-0.5 rounded-md bg-sky-950/80 border border-sky-700/60 text-sky-300 text-[11px] font-bold">
-              {churchInfo.denomination}
-            </span>
-            <span className="text-white font-medium flex items-center">
-              <span className="w-2 h-2 rounded-full bg-sky-400 inline-block mr-1.5 animate-pulse" />
-              주일 {getWorshipTimeLabel('morning')} / {getWorshipTimeLabel('afternoon')}
-            </span>
-            <span className="hidden md:inline-block text-slate-600">|</span>
-            <a
-              href={`tel:${churchInfo.phone}`}
-              className="hidden md:inline-flex items-center gap-1 text-slate-300 hover:text-white transition-colors"
-            >
-              <Phone className="w-3 h-3 text-sky-400" />
-              <span>{churchInfo.phone}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <nav
         className={`transition-all duration-300 ${
@@ -107,11 +83,11 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-slate-900 font-serif-kr">
+                <span className="text-xl font-bold tracking-tight text-slate-900">
                   {churchInfo.name}
                 </span>
               </div>
-              <p className="text-[10px] text-slate-400 font-cinzel tracking-wider uppercase font-semibold">
+              <p className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
                 {churchInfo.englishName}
               </p>
             </div>

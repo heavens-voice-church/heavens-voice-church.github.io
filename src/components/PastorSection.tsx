@@ -7,58 +7,45 @@ export const PastorSection: React.FC = () => {
     <div id="pastor" className="py-12 sm:py-16 bg-white text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <ShieldCheck className="w-4 h-4 text-sky-500" />
-            <span>{churchInfo.denomination} {churchInfo.name}</span>
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
-            담임목사 소개 및 <span className="text-sky-600">목회 비전</span>
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            기독교대한복음교회의 역사와 신앙 전통 위에서, 순전한 복음의 능력으로 영혼을 살리고 <br/>가정을 세우는 목양을 펼쳐갑니다.
-          </p>
-        </div>
-
         {/* Pastor Main Profile Card */}
         <div className="bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 text-white rounded-3xl overflow-hidden shadow-xl border border-sky-900/40">
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+          <div className="flex flex-col">
 
-            {/* Left: Pastor Image */}
-            <div className="lg:col-span-5 relative min-h-[380px] lg:min-h-full">
-              <img
-                src={churchInfo.pastor.photoUrl}
-                alt={`하늘소리교회 ${churchInfo.pastor.name}`}
-                className="w-full h-full object-cover object-center brightness-95"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent" />
+            {/* Top: Pastor & Congregation Photo */}
+            <div className="px-8 pt-10 sm:px-10 lg:px-12 flex flex-col items-center text-center">
+              <picture className="w-full flex justify-center">
+                <source srcSet={churchInfo.pastor.photoUrl.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                <img
+                  src={churchInfo.pastor.photoUrl}
+                  alt={`하늘소리교회 ${churchInfo.pastor.name}`}
+                  width={1600}
+                  height={1067}
+                  loading="lazy"
+                  className="w-full max-w-4xl rounded-2xl"
+                />
+              </picture>
 
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500 text-white text-xs font-semibold mb-2">
-                  <Award className="w-3.5 h-3.5" />
-                  <span>{churchInfo.pastor.denomination}</span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white font-serif-kr">
+              <div className="mt-5">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white">
                   {churchInfo.pastor.name} <span className="text-lg text-sky-300 font-normal">{churchInfo.pastor.title}</span>
                 </h3>
-                <p className="text-xs text-sky-200/80 font-cinzel tracking-wider mt-1">
+                <p className="text-xs text-sky-200/80 tracking-wider mt-1">
                   Senior Pastor of Heaven's Voice Church
                 </p>
               </div>
             </div>
 
-            {/* Right: Greeting & Scripture */}
-            <div className="lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+            {/* Bottom: Greeting & Scripture */}
+            <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
               <div className="space-y-4 text-left">
                 <div className="flex items-center gap-2 text-sky-400">
                   <Quote className="w-5 h-5 rotate-180 opacity-90 text-sky-400" />
                   <span className="text-xs font-semibold uppercase tracking-widest text-sky-300">
-                    담임목사 목회 서신 & 인사말
+                    담임목사 인사말
                   </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-white font-serif-kr leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
                   "{churchInfo.pastor.greetingTitle}"
                 </h3>
 
@@ -74,7 +61,7 @@ export const PastorSection: React.FC = () => {
                     <BookOpen className="w-4 h-4 text-sky-400" />
                     <span>목회 성구</span>
                   </div>
-                  <p className="text-white text-sm font-serif-kr italic">
+                  <p className="text-white text-sm italic">
                     "{churchInfo.pastor.bibleVerse.verse}"
                   </p>
                   <p className="text-xs text-sky-300 font-medium text-right">

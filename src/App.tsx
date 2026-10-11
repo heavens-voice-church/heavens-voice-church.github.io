@@ -28,7 +28,8 @@ const getTabFromHash = (): string => {
 
 export default function App() {
   // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'gallery' | 'offering' | 'location' | 'channel'
-  const [activeTab, setActiveTab] = useState<string>(getTabFromHash);
+  // Always 'home' on first render so prerendered HTML matches hydration; the real hash is applied in the effect.
+  const [activeTab, setActiveTab] = useState<string>('home');
   const [selectedPhoto, setSelectedPhoto] = useState<ChurchPhoto | null>(null);
   const selectedPhotoIndex = selectedPhoto
     ? defaultCuratedPhotos.findIndex((photo) => photo.id === selectedPhoto.id)
@@ -36,6 +37,7 @@ export default function App() {
 
   useEffect(() => {
     const initialTab = getTabFromHash();
+    setActiveTab(initialTab);
     trackPageView(initialTab, initialTab === 'home' ? '하늘소리교회 - 홈' : undefined);
 
     // Browser back/forward support: re-sync state whenever the hash changes externally.
@@ -74,7 +76,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900">
+    <div className="min-h-screen bg-white text-slate-800 flex flex-col selection:bg-sky-100 selection:text-sky-900">
       
       {/* Sticky Header Navigation */}
       <Header
@@ -89,7 +91,7 @@ export default function App() {
         engine crawlers, which don't click tabs, see the full page text on first load —
         previously each tab's content didn't exist in the DOM until a user clicked it.
       */}
-      <main className={`flex-1 ${activeTab !== 'home' ? 'pt-28 md:pt-36' : ''}`}>
+      <main className={`flex-1 ${activeTab !== 'home' ? 'pt-20 md:pt-28' : ''}`}>
         {/* Hero Section - visually shown only on the 'home' view (reached via the brand logo) */}
         <div hidden={activeTab !== 'home'}>
           <HeroSection

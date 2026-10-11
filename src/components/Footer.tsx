@@ -31,10 +31,10 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                 <ChurchMark className="w-8 h-8 text-white" />
               </div>
               <div>
-                <span className="text-xl font-bold text-white font-serif-kr tracking-tight">
+                <span className="text-xl font-bold text-white tracking-tight">
                   {churchInfo.name}
                 </span>
-                <p className="text-xs text-sky-400 font-cinzel tracking-wider uppercase font-semibold">
+                <p className="text-xs text-sky-400 tracking-wider uppercase font-semibold">
                   {churchInfo.englishName}
                 </p>
               </div>
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 font-medium text-sky-300">
                 {churchInfo.denomination}
               </span>
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 font-mono text-slate-300">
+              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">
                 {churchInfo.domainName}
               </span>
             </div>

@@ -13,7 +13,7 @@ export const SocialMediaSection: React.FC = () => {
             <Radio className="w-3.5 h-3.5 text-sky-500 animate-pulse" />
             <span>Official Online Channels</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 font-serif-kr tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
             하늘소리 미디어 & 소통 채널
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">

@@ -51,7 +51,7 @@ export const OnlineOfferingSection: React.FC = () => {
             <Heart className="w-3.5 h-3.5 text-sky-500" />
             <span>정성과 감사의 봉헌</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회 <span className="text-sky-600">온라인 헌금 안내</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -128,7 +128,7 @@ export const OnlineOfferingSection: React.FC = () => {
 
                       {/* Subtitle & Description */}
                       <div className="space-y-1">
-                        <h3 className="text-lg font-bold text-slate-900 font-serif-kr">
+                        <h3 className="text-lg font-bold text-slate-900">
                           {acc.subtitle}
                         </h3>
                         {acc.description && (
@@ -141,10 +141,10 @@ export const OnlineOfferingSection: React.FC = () => {
                       {/* Account Number Display Box */}
                       <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
                         <div>
-                          <span className="text-[10px] text-slate-500 uppercase tracking-wider block font-mono">
+                          <span className="text-[10px] text-slate-500 uppercase tracking-wider block">
                             {acc.bank} 전용 계좌번호
                           </span>
-                          <span className="text-lg sm:text-xl font-mono font-bold text-slate-900 tracking-wider">
+                          <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-wider">
                             {acc.accountNumber}
                           </span>
                         </div>
@@ -203,7 +203,7 @@ export const OnlineOfferingSection: React.FC = () => {
 
             {/* Important Reminders Banner */}
             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-xs space-y-4 text-left">
-              <div className="flex items-center gap-2 text-sm font-bold text-slate-900 font-serif-kr">
+              <div className="flex items-center gap-2 text-sm font-bold text-slate-900">
                 <Info className="w-4 h-4 text-sky-500" />
                 <span>온라인 헌금 송금 시 유의사항</span>
               </div>
@@ -235,7 +235,7 @@ export const OnlineOfferingSection: React.FC = () => {
         {activeTab === 'guide' && (
           <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs space-y-8 animate-fade-in max-w-4xl mx-auto text-left">
             <div className="space-y-2 text-center max-w-xl mx-auto">
-              <h3 className="text-xl font-bold text-slate-900 font-serif-kr">
+              <h3 className="text-xl font-bold text-slate-900">
                 스마트폰 간편 송금 3단계 가이드
               </h3>
               <p className="text-xs text-slate-600">
@@ -281,7 +281,7 @@ export const OnlineOfferingSection: React.FC = () => {
         {activeTab === 'receipt' && (
           <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-xs space-y-6 animate-fade-in max-w-3xl mx-auto text-left">
             <div className="space-y-2 text-center">
-              <h3 className="text-xl font-bold text-slate-900 font-serif-kr">
+              <h3 className="text-xl font-bold text-slate-900">
                 연말정산 기부금 영수증 발급 안내
               </h3>
               <p className="text-xs text-slate-600">
@@ -307,7 +307,7 @@ export const OnlineOfferingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-sky-700 block font-semibold">기부금 영수증 문의 직통</span>
-                  <strong className="text-sm text-slate-900">{churchInfo.phone} (월~토요일 09:00~17:00)</strong>
+                  <strong className="text-sm text-slate-900">{churchInfo.phone} (화~금요일 09:00~17:00)</strong>
                 </div>
                 <a
                   href={`tel:${churchInfo.phone}`}

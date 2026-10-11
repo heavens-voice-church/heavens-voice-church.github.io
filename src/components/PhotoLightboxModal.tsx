@@ -91,7 +91,7 @@ export const PhotoLightboxModal: React.FC<PhotoLightboxModalProps> = ({
               </span>
             </div>
 
-            <h3 className="text-base sm:text-lg font-bold text-white font-serif-kr">
+            <h3 className="text-base sm:text-lg font-bold text-white">
               {photo.title}
             </h3>
 

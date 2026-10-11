@@ -31,12 +31,12 @@ export const churchOfferingAccounts: OfferingAccount[] = [
 export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',
   englishName: "Heaven's voice Church",
-  domainName: 'heavens-voice-church.github.io',
+  domainName: 'heavensvoicechurch.com',
   slogan: '신앙은 복음적이고, 생명은 풍성하며, 삶은 거룩하게',
   subSlogan: '기독교대한복음교회 교단 정신에 따라 오직 성경과 복음의 진리 위에 서는 교회',
   denomination: '기독교대한복음교회',
   pastor: {
-    name: '유숙연 목사',
+    name: '유숙연',
     title: '담임목사',
     denomination: '기독교대한복음교회',
     greetingTitle: '복음의 진리 안에서 자유와 생명을 누리는 신앙 공동체에 오신 것을 환영합니다.',
@@ -61,18 +61,17 @@ export const churchInfo: ChurchInfo = {
       }
     ],
     education: [
-      '25년간 목사의 아내로 교우와 지역주민 돌봄 사역',
-      '이화여자대학교 신학대학원 졸업(Th.M)',
-      '(전) 연세의료원 신촌세브란스병원 원목실 목사로 환우와 직원 돌봄 사역',
-      '(전) (주)쓰리제이 사목으로 직장인 돌봄 사역',
-      '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사로 사역',
-      '(현) 기독교대한복음교회 소속 목사',
+      '(현) 기독교대한복음교회 하늘소리교회 담임목사',
       '(현) 한국임상목회교육협회(KCPE) 수퍼바이저',
       '(현) 한국목회상담협회(KAPC) 상담사, 소울프렌드 소속 상담사',
       '(현) 목회자유가족협의회 이사',
-      '(현) 하늘봄센터 대표'
+      '(현) 하늘봄 센터 대표',
+      '(전) 연세의료원 신촌세브란스병원 원목실 목사',
+      '(전) (주)쓰리제이 사목',
+      '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사',
+      '이화여자대학교 신학대학원 졸업(Th.M)',
     ],
-    photoUrl: `${import.meta.env.BASE_URL}church-main.jpg`,
+    photoUrl: `${import.meta.env.BASE_URL}congregation.jpg`,
     bibleVerse: {
       verse: '기뻐하는 사람들과 함께 기뻐하고, 우는 사람들과 함께 우십시오',
       reference: '로마서 12장 15절(새번역)'
@@ -83,7 +82,7 @@ export const churchInfo: ChurchInfo = {
   postalCode: '10021',
   phone: '010-9849-2100',
   email: 'heavensvoicechurch@gmail.com',
-  officeHours: '월요일 ~ 토요일 09:00 ~ 17:00',
+  officeHours: '화요일 ~ 금요일 09:00 ~ 17:00',
   youtubeChannel: 'https://www.youtube.com/@haneulsorichurch',
   instagram: 'https://www.instagram.com/haneulsori_church',
   publicTransit: {

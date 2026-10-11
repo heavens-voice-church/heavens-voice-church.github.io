@@ -24,7 +24,7 @@ export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ 
             <Clock className="w-3.5 h-3.5 text-sky-500" />
             <span>주일 예배 안내 (오전 & 오후)</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900 font-serif-kr">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회 <span className="text-sky-600">예배 시간표</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
@@ -59,7 +59,7 @@ export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ 
 
                 {/* Name & Time */}
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900 font-serif-kr group-hover:text-sky-600 transition-colors">
+                  <h3 className="text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
                     {item.name}
                   </h3>
 
