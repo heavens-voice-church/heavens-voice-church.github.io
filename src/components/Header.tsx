@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navTabs = [
     { id: 'intro', label: '교회 소개' },
-    { id: 'pastor', label: '담임 목사 소개' },
+    // { id: 'pastor', label: '담임 목사 소개' }, // temporarily disabled
     { id: 'worship', label: '예배 시간 안내' },
     // { id: 'gallery', label: '사진 갤러리' }, // temporarily disabled
     { id: 'location', label: '교회 위치' },

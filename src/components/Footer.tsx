@@ -68,14 +68,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   • 하늘소리교회 소개
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => onSelectTab('pastor')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   • 담임목사 소개
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
                   onClick={() => onSelectTab('worship')}

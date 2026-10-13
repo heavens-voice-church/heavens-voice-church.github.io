@@ -71,7 +71,7 @@ export const churchInfo: ChurchInfo = {
       '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사',
       '이화여자대학교 신학대학원 졸업(Th.M)',
     ],
-    photoUrl: `${import.meta.env.BASE_URL}congregation.jpg`,
+    photoUrl: `${import.meta.env.BASE_URL}pastor-illustration.svg`,
     bibleVerse: {
       verse: '기뻐하는 사람들과 함께 기뻐하고, 우는 사람들과 함께 우십시오',
       reference: '로마서 12장 15절(새번역)'

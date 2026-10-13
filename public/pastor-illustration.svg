@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="하늘소리교회 담임목사와 교인들 일러스트">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FCD34D"/>
+      <stop offset="1" stop-color="#EAB308"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky, clouds, sun -->
+  <rect width="600" height="400" fill="url(#sky)"/>
+  <circle cx="510" cy="70" r="30" fill="#FEF9C3"/>
+  <g fill="#FFFFFF" opacity="0.9">
+    <ellipse cx="120" cy="70" rx="46" ry="16"/>
+    <ellipse cx="150" cy="58" rx="30" ry="16"/>
+    <ellipse cx="350" cy="95" rx="40" ry="13"/>
+    <ellipse cx="375" cy="85" rx="24" ry="12"/>
+  </g>
+
+  <!-- Distant hills -->
+  <path d="M0 215 Q90 175 180 205 T360 200 T600 195 V240 H0 Z" fill="#93C5FD" opacity="0.7"/>
+
+  <!-- Church (same mark as the site logo, enlarged) -->
+  <g transform="translate(420 120) scale(4)" fill="none" stroke="#0369A1" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 18V26.5H29.5V18.5L23 13L17.8 16.5L11 10.5L2.5 18Z" fill="#FFFFFF" stroke="none"/>
+    <path d="M11 2.5V10.5M8 5.5H14" stroke-width="1.8"/>
+    <path d="M2.5 18L11 10.5L17.8 16.5" stroke-width="2.2"/>
+    <path d="M16 18.5L23 13L30 18.5" stroke-width="2.2"/>
+    <path d="M3 18V26.5H29.5V18.5" stroke-width="2.2"/>
+    <path d="M16 18.5V26.5" stroke-width="1.6"/>
+    <path d="M7.5 26.5V21C7.5 20.2 8.2 19.5 9 19.5H10.5C11.3 19.5 12 20.2 12 21V26.5" stroke-width="1.5"/>
+    <rect x="20" y="19" width="6" height="4.5" rx="0.8" stroke-width="1.4"/>
+  </g>
+
+  <!-- Golden rice field -->
+  <path d="M0 230 Q300 212 600 230 V400 H0 Z" fill="url(#field)"/>
+  <g stroke="#CA8A04" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <path d="M30 300 l6 -14 M60 340 l6 -14 M540 310 l6 -14 M570 350 l6 -14 M20 370 l6 -14 M585 280 l6 -14"/>
+  </g>
+
+  <!-- Five people standing together -->
+  <g>
+    <!-- 1 -->
+    <path d="M70 400 V318 Q70 282 108 282 Q146 282 146 318 V400 Z" fill="#1E3A8A"/>
+    <circle cx="108" cy="252" r="24" fill="#FDE1C8"/>
+    <path d="M84 250 Q84 222 108 222 Q132 222 132 250 Q122 236 108 238 Q94 236 84 250 Z" fill="#1F2937"/>
+
+    <!-- 2: senior pastor (white hair, glasses) -->
+    <path d="M160 400 V330 Q160 294 198 294 Q236 294 236 330 V400 Z" fill="#111827"/>
+    <circle cx="198" cy="264" r="24" fill="#FDE1C8"/>
+    <path d="M172 268 Q166 236 186 228 Q198 220 212 228 Q232 236 224 268 Q222 248 210 242 Q198 238 186 242 Q174 248 172 268 Z" fill="#E5E7EB"/>
+    <g fill="none" stroke="#7C2D12" stroke-width="1.8">
+      <circle cx="190" cy="264" r="6"/>
+      <circle cx="206" cy="264" r="6"/>
+      <path d="M196 264 H200"/>
+    </g>
+    <path d="M192 276 Q198 281 204 276" fill="none" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- 3 -->
+    <path d="M252 400 V326 Q252 290 290 290 Q328 290 328 326 V400 Z" fill="#E7D8C3"/>
+    <circle cx="290" cy="258" r="24" fill="#FDE1C8"/>
+    <path d="M266 258 Q264 228 290 226 Q316 228 314 258 Q304 240 290 242 Q276 240 266 258 Z" fill="#1F2937"/>
+
+    <!-- 4 -->
+    <path d="M344 400 V330 Q344 294 382 294 Q420 294 420 330 V400 Z" fill="#1F2937"/>
+    <circle cx="382" cy="264" r="24" fill="#FDE1C8"/>
+    <path d="M356 272 Q350 236 382 232 Q414 236 408 272 Q404 250 382 246 Q360 250 356 272 Z" fill="#292524"/>
+
+    <!-- 5 -->
+    <path d="M436 400 V320 Q436 284 474 284 Q512 284 512 320 V400 Z" fill="#292524"/>
+    <circle cx="474" cy="254" r="24" fill="#FDE1C8"/>
+    <path d="M450 252 Q450 224 474 224 Q498 224 498 252 Q490 238 474 240 Q458 238 450 252 Z" fill="#111827"/>
+
+    <!-- simple smiles -->
+    <g fill="none" stroke="#9A3412" stroke-width="1.8" stroke-linecap="round">
+      <path d="M102 262 Q108 267 114 262"/>
+      <path d="M284 268 Q290 273 296 268"/>
+      <path d="M376 274 Q382 279 388 274"/>
+      <path d="M468 264 Q474 269 480 264"/>
+    </g>
+  </g>
+</svg>

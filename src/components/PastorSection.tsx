@@ -13,17 +13,15 @@ export const PastorSection: React.FC = () => {
 
             {/* Top: Pastor & Congregation Photo */}
             <div className="px-8 pt-10 sm:px-10 lg:px-12 flex flex-col items-center text-center">
-              <picture className="w-full flex justify-center">
-                <source srcSet={churchInfo.pastor.photoUrl.replace(/\.jpg$/, '.webp')} type="image/webp" />
-                <img
-                  src={churchInfo.pastor.photoUrl}
-                  alt={`하늘소리교회 ${churchInfo.pastor.name}`}
-                  width={1600}
-                  height={1067}
-                  loading="lazy"
-                  className="w-full max-w-4xl rounded-2xl"
-                />
-              </picture>
+              {/* Temporary illustration; to restore the photo set photoUrl back to congregation.jpg and re-add a <picture> with the .webp source */}
+              <img
+                src={churchInfo.pastor.photoUrl}
+                alt={`하늘소리교회 ${churchInfo.pastor.name}와 교인들 일러스트`}
+                width={1200}
+                height={800}
+                loading="lazy"
+                className="w-full max-w-4xl rounded-2xl"
+              />
 
               <div className="mt-5">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white">

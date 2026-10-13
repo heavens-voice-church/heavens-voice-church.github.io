@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { ChurchIntroSection } from './components/ChurchIntroSection';
-import { PastorSection } from './components/PastorSection';
+// import { PastorSection } from './components/PastorSection'; // pastor tab temporarily disabled
 import { WorshipScheduleSection } from './components/WorshipScheduleSection';
 // import { PhotoGallerySection } from './components/PhotoGallerySection'; // gallery temporarily disabled
 import { PhotoLightboxModal } from './components/PhotoLightboxModal';
@@ -19,8 +19,8 @@ import { ChurchPhoto } from './types';
 import { trackPageView } from './utils/analytics';
 
 // Tab ids addressable via URL hash (e.g. '#worship'). 'home' has no hash.
-// 'gallery' is temporarily disabled; add it back here, in Header navTabs, and in Footer to restore.
-const HASH_TABS = ['intro', 'pastor', 'worship', 'offering', 'location', 'channel'];
+// 'gallery' and 'pastor' are temporarily disabled; add them back here, in Header navTabs, and in Footer to restore.
+const HASH_TABS = ['intro', 'worship', 'offering', 'location', 'channel'];
 
 const getTabFromHash = (): string => {
   const hash = window.location.hash.replace(/^#/, '');
@@ -109,9 +109,10 @@ export default function App() {
           </section>
 
           {/* Tab 2: 담임 목사 소개 */}
-          <section hidden={activeTab !== 'pastor'}>
+          {/* temporarily disabled */}
+          {/* <section hidden={activeTab !== 'pastor'}>
             <PastorSection />
-          </section>
+          </section> */}
 
           {/* Tab 3: 예배 시간표 */}
           <section hidden={activeTab !== 'worship'}>
