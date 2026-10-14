@@ -1,5 +1,5 @@
 import React from 'react';
-import { churchInfo } from '../data/churchData';
+import { churchInfo, churchOfficers } from '../data/churchData';
 import { Award, BookOpen, Quote, ShieldCheck, GraduationCap } from './icons';
 
 export const PastorSection: React.FC = () => {
@@ -7,20 +7,27 @@ export const PastorSection: React.FC = () => {
     <div id="pastor" className="py-12 sm:py-16 bg-white text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
 
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            하늘소리교회를 <span className="text-sky-600">섬기는 사람들</span>
+          </h2>
+        </div>
+
         {/* Pastor Main Profile Card */}
         <div className="bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 text-white rounded-3xl overflow-hidden shadow-xl border border-sky-900/40">
-          <div className="flex flex-col">
+          <div className="grid grid-cols-1 lg:grid-cols-12">
 
-            {/* Top: Pastor & Congregation Photo */}
-            <div className="px-8 pt-10 sm:px-10 lg:px-12 flex flex-col items-center text-center">
-              {/* Temporary illustration; to restore the photo set photoUrl back to congregation.jpg and re-add a <picture> with the .webp source */}
+            {/* Left: Pastor Photo (compact) */}
+            <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 lg:pr-4 flex flex-col items-center justify-center text-center">
+              {/* Temporary illustration; when a real photo is ready, add it to public/ and point pastor.photoUrl at it */}
               <img
                 src={churchInfo.pastor.photoUrl}
                 alt={`하늘소리교회 ${churchInfo.pastor.name}와 교인들 일러스트`}
                 width={1200}
                 height={800}
                 loading="lazy"
-                className="w-full max-w-4xl rounded-2xl"
+                className="w-full max-w-sm rounded-2xl"
               />
 
               <div className="mt-5">
@@ -33,8 +40,8 @@ export const PastorSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Bottom: Greeting & Scripture */}
-            <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-6">
+            {/* Right: Greeting & Scripture */}
+            <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 lg:pl-4 flex flex-col justify-between space-y-6">
               <div className="space-y-4 text-left">
                 <div className="flex items-center gap-2 text-sky-400">
                   <Quote className="w-5 h-5 rotate-180 opacity-90 text-sky-400" />
@@ -89,6 +96,26 @@ export const PastorSection: React.FC = () => {
 
           </div>
         </div>
+
+        {/* Church Officers (elders, deacons, ...): shown once churchOfficers has entries */}
+        {churchOfficers.length > 0 && (
+          <div className="space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 text-center">함께 섬기는 사람들</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+              {churchOfficers.map((o) => (
+                <div key={o.title + o.name} className="bg-white rounded-2xl border border-slate-200 p-5 text-center shadow-xs space-y-3">
+                  {o.photoUrl && (
+                    <img src={o.photoUrl} alt={`${o.name} ${o.title}`} loading="lazy" className="w-24 h-24 mx-auto rounded-full object-cover" />
+                  )}
+                  <div>
+                    <p className="text-base font-bold text-slate-900">{o.name} <span className="text-sm font-medium text-sky-600">{o.title}</span></p>
+                    {o.description && <p className="text-xs text-slate-500 mt-1 leading-relaxed">{o.description}</p>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
       </div>
     </div>

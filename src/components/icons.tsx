@@ -42,4 +42,5 @@ export {
   Warning as AlertTriangle,
   MagnifyingGlass as Search,
   Funnel as Filter,
+  FolderOpen,
 } from '@phosphor-icons/react';

@@ -18,6 +18,19 @@ export interface ChurchPhoto {
   description?: string;
 }
 
+export interface ChurchEvent {
+  date: string;
+  title: string;
+  note?: string;
+}
+
+export interface MemoryVerse {
+  id: string;
+  title: string; // e.g. '1월 암송 구절'
+  url: string;   // image path, e.g. `${import.meta.env.BASE_URL}verses/2026-01.jpg`
+  date?: string;
+}
+
 export interface OfferingAccount {
   id: string;
   category: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo } from '../data/churchData';
-import { ChurchMark } from './Header';
+import { BrandLogo } from './Header';
 import {
   Phone,
   Mail,
@@ -26,19 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
 
           {/* Brand Info (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center text-white shadow-xs">
-                <ChurchMark className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <span className="text-xl font-bold text-white tracking-tight">
-                  {churchInfo.name}
-                </span>
-                <p className="text-xs text-sky-400 tracking-wider uppercase font-semibold">
-                  {churchInfo.englishName}
-                </p>
-              </div>
-            </div>
+            <BrandLogo dark />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
               "{churchInfo.slogan}"
@@ -68,14 +56,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   • 하늘소리교회 소개
                 </button>
               </li>
-              {/* <li>
+              <li>
                 <button
                   onClick={() => onSelectTab('pastor')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  • 담임목사 소개
+                  • 섬기는 사람들
                 </button>
-              </li> */}
+              </li>
               <li>
                 <button
                   onClick={() => onSelectTab('worship')}
@@ -84,20 +72,28 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   • 주일 예배 시간표
                 </button>
               </li>
-              {/* <li>
-                <button
-                  onClick={() => onSelectTab('gallery')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  • 사진 갤러리
-                </button>
-              </li> */}
               <li>
                 <button
                   onClick={() => onSelectTab('location')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   • 찾아오시는 길 & 연락처
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onSelectTab('prayer')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  • 중보기도 요청
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onSelectTab('archive')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  • 자료실
                 </button>
               </li>
               <li>

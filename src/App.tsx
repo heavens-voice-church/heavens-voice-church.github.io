@@ -6,11 +6,12 @@ import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { ChurchIntroSection } from './components/ChurchIntroSection';
-// import { PastorSection } from './components/PastorSection'; // pastor tab temporarily disabled
+import { PastorSection } from './components/PastorSection'; 
 import { WorshipScheduleSection } from './components/WorshipScheduleSection';
-// import { PhotoGallerySection } from './components/PhotoGallerySection'; // gallery temporarily disabled
+import { PhotoGallerySection } from './components/PhotoGallerySection';
 import { PhotoLightboxModal } from './components/PhotoLightboxModal';
 import { OnlineOfferingSection } from './components/OnlineOfferingSection';
+import { PrayerRequestSection } from './components/PrayerRequestSection';
 import { LocationSection } from './components/LocationSection';
 import { SocialMediaSection } from './components/SocialMediaSection';
 import { Footer } from './components/Footer';
@@ -19,8 +20,7 @@ import { ChurchPhoto } from './types';
 import { trackPageView } from './utils/analytics';
 
 // Tab ids addressable via URL hash (e.g. '#worship'). 'home' has no hash.
-// 'gallery' and 'pastor' are temporarily disabled; add them back here, in Header navTabs, and in Footer to restore.
-const HASH_TABS = ['intro', 'worship', 'offering', 'location', 'channel'];
+const HASH_TABS = ['intro', 'pastor', 'worship', 'archive', 'prayer', 'offering', 'location', 'channel'];
 
 const getTabFromHash = (): string => {
   const hash = window.location.hash.replace(/^#/, '');
@@ -28,7 +28,7 @@ const getTabFromHash = (): string => {
 };
 
 export default function App() {
-  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'gallery' | 'offering' | 'location' | 'channel'
+  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'archive' | 'prayer' | 'offering' | 'location' | 'channel'
   // Always 'home' on first render so prerendered HTML matches hydration; the real hash is applied in the effect.
   const [activeTab, setActiveTab] = useState<string>('home');
   const [selectedPhoto, setSelectedPhoto] = useState<ChurchPhoto | null>(null);
@@ -109,20 +109,24 @@ export default function App() {
           </section>
 
           {/* Tab 2: 담임 목사 소개 */}
-          {/* temporarily disabled */}
-          {/* <section hidden={activeTab !== 'pastor'}>
+          <section hidden={activeTab !== 'pastor'}>
             <PastorSection />
-          </section> */}
+          </section>
 
           {/* Tab 3: 예배 시간표 */}
           <section hidden={activeTab !== 'worship'}>
-            <WorshipScheduleSection onNavigate={handleTabSelect} />
+            <WorshipScheduleSection />
           </section>
 
-          {/* Tab 4: 사진 갤러리 (temporarily disabled) */}
-          {/* <section hidden={activeTab !== 'gallery'}>
+          {/* Tab 4: 자료실 (교회 행사 · 사진 · 암송 구절 · 주보) */}
+          <section hidden={activeTab !== 'archive'}>
             <PhotoGallerySection onSelectPhoto={setSelectedPhoto} />
-          </section> */}
+          </section>
+
+          {/* Tab: 중보기도 요청 */}
+          <section hidden={activeTab !== 'prayer'}>
+            <PrayerRequestSection />
+          </section>
 
           {/* Tab 5: 온라인 헌금 */}
           <section hidden={activeTab !== 'offering'}>

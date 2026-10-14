@@ -101,7 +101,7 @@ export const OnlineOfferingSection: React.FC = () => {
         {/* Tab 1: Offering Accounts Grid */}
         {activeTab === 'accounts' && (
           <div className="space-y-8 animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto w-full">
               {churchOfferingAccounts.map((acc) => {
                 const isCopied = copiedId === acc.id;
                 return (
@@ -250,7 +250,7 @@ export const OnlineOfferingSection: React.FC = () => {
                 </div>
                 <h4 className="text-sm font-bold text-slate-900">계좌번호 복사</h4>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  위 헌금 계좌 목록에서 송금하실 목적의 <br/>계좌 [복사] 버튼을 누릅니다.
+                  위 헌금 계좌의 <br/>[복사] 버튼을 누릅니다.
                 </p>
               </div>
 

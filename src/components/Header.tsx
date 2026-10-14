@@ -30,6 +30,30 @@ export const ChurchMark: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
+// Brand lockup: [mark] [기독교 / 대한복음교회 stacked] [하늘소리교회 + English name]
+export const BrandLogo: React.FC<{ dark?: boolean }> = ({ dark }) => (
+  <div className="flex items-center gap-2.5">
+    <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center shadow-xs text-white shrink-0">
+      <ChurchMark className="w-8 h-8 text-white" />
+    </div>
+    {/* inline-grid sizes to the wider line; justify-between spreads "기독교" across the width of "대한복음교회" */}
+    <div className={`inline-grid text-[11px] leading-[1.35] font-semibold ${dark ? 'text-sky-300' : 'text-slate-500'}`}>
+      <span className="flex justify-between">
+        {'기독교'.split('').map((c) => <span key={c}>{c}</span>)}
+      </span>
+      <span>대한복음교회</span>
+    </div>
+    <span>
+      <span className={`block text-xl font-bold tracking-tight leading-tight ${dark ? 'text-white' : 'text-slate-900'}`}>
+        {churchInfo.name}
+      </span>
+      <span className={`block text-[10px] tracking-wider uppercase font-semibold ${dark ? 'text-sky-400' : 'text-slate-400'}`}>
+        {churchInfo.englishName}
+      </span>
+    </span>
+  </div>
+);
+
 export const Header: React.FC<HeaderProps> = ({
   activeTab,
   onSelectTab,
@@ -47,10 +71,11 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navTabs = [
     { id: 'intro', label: '교회 소개' },
-    // { id: 'pastor', label: '담임 목사 소개' }, // temporarily disabled
+    { id: 'pastor', label: '섬기는 사람들' },
     { id: 'worship', label: '예배 시간 안내' },
-    // { id: 'gallery', label: '사진 갤러리' }, // temporarily disabled
     { id: 'location', label: '교회 위치' },
+    { id: 'prayer', label: '중보기도' },
+    { id: 'archive', label: '자료실' },
     { id: 'offering', label: '헌금 안내' },
     // { id: 'channel', label: '교회 SNS 채널' },  // temporarily disabled
   ];
@@ -76,21 +101,10 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Brand Logo */}
           <button
             onClick={() => handleTabClick('home')}
-            className="flex items-center space-x-3 text-left group cursor-pointer"
+            className="text-left cursor-pointer hover:opacity-90 transition-opacity"
+            aria-label={`${churchInfo.denomination} ${churchInfo.name} 홈`}
           >
-            <div className="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center shadow-xs text-white group-hover:bg-sky-600 transition-colors">
-              <ChurchMark className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-bold tracking-tight text-slate-900">
-                  {churchInfo.name}
-                </span>
-              </div>
-              <p className="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">
-                {churchInfo.englishName}
-              </p>
-            </div>
+            <BrandLogo />
           </button>
 
           {/* Desktop Navigation Tabs */}

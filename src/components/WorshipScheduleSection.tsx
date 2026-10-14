@@ -1,19 +1,13 @@
 import React from 'react';
-import { worshipSchedules, churchInfo } from '../data/churchData';
+import { worshipSchedules, churchInfo, monthlyServices } from '../data/churchData';
 import {
   Clock,
-  MapPin,
-  ChevronRight,
   Radio,
   BookOpen,
   CalendarCheck
 } from './icons';
 
-interface WorshipScheduleSectionProps {
-  onNavigate: (tabId: string) => void;
-}
-
-export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ onNavigate }) => {
+export const WorshipScheduleSection: React.FC = () => {
   return (
     <div id="worship" className="py-12 sm:py-16 bg-white text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -85,9 +79,9 @@ export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ 
                     </div>
                     <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-600">
                       {item.orderSummary.map((order, oIdx) => (
-                        <div key={oIdx} className="flex items-center gap-1.5 truncate">
+                        <div key={oIdx} className="flex items-start gap-1.5">
                           <span className="text-sky-500 font-semibold">{oIdx + 1}.</span>
-                          <span className="truncate">{order}</span>
+                          <span className="break-keep">{order}</span>
                         </div>
                       ))}
                     </div>
@@ -98,41 +92,23 @@ export const WorshipScheduleSection: React.FC<WorshipScheduleSectionProps> = ({ 
           ))}
         </div>
 
-        {/* Worship Etiquette & Live Callout Box */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4">
-
-          {/* Card 1: Worship Preparation Guide */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-left space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">
-              <CalendarCheck className="w-5 h-5" />
-            </div>
-            <h4 className="text-base font-bold text-slate-900">예배 10분 전 기도로 준비</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              예배 시작 10분 전에 도착하시어 기도로 마음을 정돈하고, 예배당 안내위원의 안내에 따라 착석해 주시기 바랍니다.
-            </p>
+        {/* Monthly Services */}
+        <div className="bg-sky-50/60 border border-sky-200 rounded-3xl p-6 sm:p-8 text-left space-y-4">
+          <div className="flex items-center gap-2 text-sm font-bold text-sky-800">
+            <CalendarCheck className="w-5 h-5 text-sky-500" />
+            <span>매월 정기 예배 안내</span>
           </div>
-
-          {/* Card 2: Location Shortcut */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-left space-y-3 flex flex-col justify-between">
-            <div className="space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold">
-                <MapPin className="w-5 h-5" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {monthlyServices.map((m) => (
+              <div key={m.title} className="bg-white rounded-2xl border border-sky-100 p-5 flex items-start gap-4">
+                <span className="shrink-0 px-3 py-1 rounded-full bg-sky-500 text-white text-xs font-bold">{m.when}</span>
+                <div>
+                  <h4 className="text-base font-bold text-slate-900">{m.title}</h4>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">{m.description}</p>
+                </div>
               </div>
-              <h4 className="text-base font-bold text-slate-900">찾아오시는 길</h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                하늘소리교회 예배당으로 찾아오시는 길, 대중교통 및 지도 정보를 자세히 확인하실 수 있습니다.
-              </p>
-            </div>
-
-            <button
-              onClick={() => onNavigate('location')}
-              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-colors w-full cursor-pointer shadow-xs"
-            >
-              <span>위치 정보 확인</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-            </button>
+            ))}
           </div>
-
         </div>
 
       </div>

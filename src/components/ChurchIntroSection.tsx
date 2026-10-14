@@ -1,6 +1,6 @@
 import React from 'react';
-import { churchInfo } from '../data/churchData';
-import { ShieldCheck, CheckCircle2 } from './icons';
+import { churchInfo, churchIntro, churchHistory } from '../data/churchData';
+import { ShieldCheck, BookOpen, Calendar } from './icons';
 
 export const ChurchIntroSection: React.FC = () => {
   const gospelCoreValues = [
@@ -47,59 +47,66 @@ export const ChurchIntroSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Core Values Card or Banner */}
-        <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 text-center max-w-4xl mx-auto space-y-4">
-          <h3 className="text-lg sm:text-xl font-bold text-sky-700">
-            "{churchInfo.slogan}"
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            하늘소리교회는 예수 그리스도의 은혜와 진리 안에서 영적인 예배를 드리고, 성도의 성숙한 교제를 도모하며,<br/> 세상 속에서 그리스도의 빛을 비추는 복음의 공동체입니다.
-          </p>
-        </div>
-
-        {/* Evangelical Church of Korea 3 Core Pillars */}
-        <div className="space-y-6">
-          <div className="text-center space-y-2">
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-              기독교대한복음교회 3대 신앙 지침
-            </h3>
+        {/* Introduction / History / Denomination tenets, stacked vertically */}
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          {/* 하늘소리교회 소개 */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
+            <div className="flex items-center gap-2 text-sky-600">
+              <BookOpen className="w-5 h-5" />
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">하늘소리교회를 소개합니다</h3>
+            </div>
+            <div className="space-y-3 text-sm sm:text-base text-slate-600 leading-relaxed break-keep">
+              {churchIntro.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            <blockquote className="border-l-4 border-sky-400 bg-sky-50/60 rounded-r-2xl px-5 py-4 text-sm sm:text-base text-sky-800 font-medium leading-relaxed break-keep">
+              {churchIntro.invitation.map((line, i) => (
+                <span key={i} className="block">{i === 0 && '"'}{line}{i === churchIntro.invitation.length - 1 && '"'}</span>
+              ))}
+            </blockquote>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {gospelCoreValues.map((pillar, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-400 hover:shadow-md transition-all flex flex-col justify-between group shadow-xs text-left"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center font-bold text-sm border border-sky-100">
-                      {pillar.number}
-                    </span>
-                    <span className="text-[11px] font-semibold text-sky-600 uppercase tracking-wider">
-                      {/* {pillar.engTitle} */}
-                    </span>
-                  </div>
-
-                  <h4 className="text-base font-bold text-slate-900">
-                    {pillar.title}
-                  </h4>
-
-                  {/* <p className="text-xs text-slate-600 leading-relaxed">
-                    {pillar.description}
-                  </p> */}
-                </div>
-
-                <div className="pt-4 mt-4 border-t border-slate-100 space-y-1.5">
-                  {/* {pillar.points.map((pt, pIdx) => (
-                    <div key={pIdx} className="flex items-center gap-2 text-[11px] text-slate-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-sky-500 shrink-0" />
-                      <span>{pt}</span>
-                    </div>
-                  ))} */}
-                </div>
+          {/* 교회 연혁 */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
+            <div className="flex items-center gap-2 text-sky-600">
+              <Calendar className="w-5 h-5" />
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">교회 연혁</h3>
+            </div>
+            {churchHistory.length > 0 ? (
+              <ol className="relative border-l-2 border-sky-200 ml-1.5 space-y-4">
+                {churchHistory.map((h, i) => (
+                  <li key={i} className="pl-5 relative">
+                    <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-sky-500" />
+                    <p className="text-xs font-bold text-sky-700">{h.date}</p>
+                    <p className="text-sm text-slate-700">{h.title}</p>
+                    {h.note && <p className="text-xs text-slate-500">{h.note}</p>}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm text-slate-500">
+                교회 연혁을 준비하고 있습니다.
               </div>
-            ))}
+            )}
+          </div>
+
+          {/* 기독교대한복음교회 3대 신앙 지침 */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
+            <div className="flex items-center gap-2 text-sky-600">
+              <ShieldCheck className="w-5 h-5" />
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">기독교대한복음교회 3대 신앙 지침</h3>
+            </div>
+            <ol className="divide-y divide-slate-100">
+              {gospelCoreValues.map((pillar) => (
+                <li key={pillar.number} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
+                  <span className="w-9 h-9 shrink-0 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center font-bold text-sm border border-sky-100">
+                    {pillar.number}
+                  </span>
+                  <span className="text-base font-bold text-slate-900">{pillar.title}</span>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </div>

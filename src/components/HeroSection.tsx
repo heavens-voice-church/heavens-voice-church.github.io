@@ -1,5 +1,5 @@
 import React from 'react';
-import { churchInfo, getWorshipTimeLabel } from '../data/churchData';
+import { churchInfo, getWorshipTimeLabel, yearMotto } from '../data/churchData';
 import { BookOpen } from './icons';
 
 interface HeroSectionProps {
@@ -30,6 +30,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   <span className="text-sky-600"><span className="absolute -translate-x-full">"</span>하늘소리, 세상의 빛이어라"</span>
                 </span>
               </h1>
+              {/* 2026 motto verse */}
+              <p className="-mt-2 font-serif-kr text-sky-700 text-base sm:text-lg">
+                {yearMotto.verse} <span className="text-slate-500 text-sm">({yearMotto.reference})</span>
+              </p>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
                 고막리에서 들려오는 아름다운 복음의 소리, 하늘소리교회에 여러분을 초대합니다.
               </p>
@@ -85,7 +89,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   "{churchInfo.pastor.bibleVerse.verse}"
                 </p>
                 <div className="pt-1.5 border-t border-slate-100 text-xs flex items-center justify-between">
-                  <span className="text-slate-600 font-medium">담임목사 : {churchInfo.pastor.name}</span>
+                  <span className="text-slate-600 text-sm">담임목사 : <strong className="text-slate-900 font-bold">{churchInfo.pastor.name}</strong></span>
                   <span className="text-slate-500 text-[9px]">{churchInfo.pastor.bibleVerse.reference}</span>
                 </div>
               </div>

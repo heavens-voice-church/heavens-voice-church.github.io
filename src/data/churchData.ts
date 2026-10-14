@@ -2,31 +2,86 @@ import {
   ChurchInfo,
   WorshipSchedule,
   ChurchPhoto,
-  OfferingAccount
+  OfferingAccount,
+  ChurchEvent,
+  MemoryVerse
 } from '../types';
 
 export const churchOfferingAccounts: OfferingAccount[] = [
   {
     id: 'offering-1',
-    category: '감사헌금',
-    subtitle: '범사에 베풀어주신 은혜에 대한 감사',
+    category: '온라인 헌금',
+    subtitle: '하늘소리교회 온라인 헌금 계좌',
     bank: '국민은행',
     accountNumber: '535901-01-396982',
     holder: '하늘소리교회',
-    description: '생일, 승진, 회복, 범사감사 및 절기 감사헌금 전용 계좌입니다.',
-    recommendedFor: ['범사감사','절기감사']
-  },
-  {
-    id: 'offering-2',
-    category: '비전 / 시설 헌금',
-    subtitle: '은혜의 예배 처소와 성전 가꾸기',
-    bank: '국민은행',
-    accountNumber: '987-654321-02008',
-    holder: '하늘소리교회',
-    description: '예배당 환경 개선 및 복음 사역을 위한 목적 헌금입니다.',
-    recommendedFor: ['성전가꾸기', '비전헌금']
+    description: '십일조, 감사헌금, 절기헌금 등 모든 헌금을 이 계좌 하나로 온라인 송금하실 수 있습니다.',
+    recommendedFor: ['십일조', '감사헌금', '절기헌금']
   }
 ];
+
+// 2026년 교회 표어
+export const yearMotto = {
+  year: 2026,
+  title: '은혜의 50년',
+  motto: '하늘소리, 세상의 빛이어라',
+  verse: '너희는 세상의 빛이라',
+  reference: '마태복음 5:14'
+};
+
+// 교회 소개글
+export const churchIntro = {
+  paragraphs: [
+    '하늘소리교회는 기독교대한복음교회에 속한 교회로 1976년 창립되어, 2006년 이곳 김포시 월곶면으로 이전하였고, 2023년 교회 이름 천성교회를 순우리말인 하늘소리교회로 변경하였습니다.',
+    '1대에서 6대까지 헌신적인 목회자들이 목회하였고, 팬데믹 이후 2023년부터 설교목사 중 한 분이었던 유숙연 목사가 7대 담임목회자로 청빙되어 2026년 2월 8일 취임식을 하고, 복음적인 말씀 선포와 청년 중심의 교육과 섬김의 훈련을 하면서 아름다운 공동체로 나아가고 있습니다.'
+  ],
+  invitation: [
+    '말씀이 살아있고, 아름다운 성만찬을 나누는 교회,',
+    '청년을 사랑하는 교회, 자연 친화적인 교회,',
+    '함께 기뻐하고 함께 슬퍼하는 믿음 공동체, 하늘소리교회로 여러분을 초대합니다.'
+  ]
+};
+
+// 섬기는 사람들: 장로 등 직분자 (항목을 추가하면 '섬기는 사람들' 탭에 자동 표시)
+export const churchOfficers: { name: string; title: string; photoUrl?: string; description?: string }[] = [];
+
+// 교회 연혁: 자료 전달 후 채울 예정 (비어 있으면 '준비 중'으로 표시)
+export const churchHistory: ChurchEvent[] = [];
+
+// 2026년 교회 일정
+export const churchEvents2026: ChurchEvent[] = [
+  { date: '1월 4일', title: '신년예배 / 유숙연 담임목사 부임' },
+  { date: '2월 8일', title: '유숙연 목사 위임감사예배' },
+  { date: '2월 18일', title: '재의 수요일', note: '사순절 시작' },
+  { date: '3월 1주', title: '오후 1시 30분 예배 시작' },
+  { date: '3월 4주', title: '만남의 주일 시작' },
+  { date: '4월 3일', title: '성금요일', note: '3월 30일 ~ 4월 4일 고난주간' },
+  { date: '4월 5일', title: '부활주일 (기쁨의 50일 시작)', note: '오후: 찬양사역자 초청 집회' },
+  { date: '5월 3일', title: '가족주일', note: '어린이 / 어버이주일' },
+  { date: '5월 24일', title: '성령강림주일' },
+  { date: '5월 31일', title: '연합예배', note: '여은감리교회 (담임목사: 장훈태)' },
+  { date: '7월 12일', title: '교회창립 50주년 기념주일' },
+  { date: '10월 25일', title: '종교개혁 기념주일' },
+  { date: '11월 15일', title: '추수감사주일' },
+  { date: '11월 29일', title: '대림절 시작' },
+  { date: '12월 25일', title: '성탄절' },
+  { date: '12월 31일', title: '송구영신' }
+];
+
+// 매월 정기 예배 (예배 안내에 표시)
+export const monthlyServices = [
+  { when: '매월 첫째 주', title: '성찬식', description: '매달 첫 주 예배에서 성찬식이 거행됩니다.' },
+  { when: '매월 넷째 주', title: '만남의 주일', description: '매달 넷째 주는 만남의 주일로 모입니다.' }
+];
+
+// 자료실 > 교회 사진: 사진 정리가 끝나면 true로 바꿔 다시 노출
+export const SHOW_CHURCH_PHOTOS = false;
+
+// 자료실 > 암송 구절 (1~10월): 교회 사진처럼 이미지로 제공 예정
+export const memoryVerses: MemoryVerse[] = [];
+
+// 자료실 > 주보: Google Drive 공유 링크를 넣으면 '주보 보기' 버튼이 표시됨
+export const bulletinDriveUrl = '';
 
 export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',
@@ -78,7 +133,7 @@ export const churchInfo: ChurchInfo = {
     }
   },
   address: '경기도 김포시 용강로 100',
-  addressDetail: '하늘소리교회 예배당',
+  addressDetail: '하늘소리교회',
   postalCode: '10021',
   phone: '010-9849-2100',
   email: 'heavensvoicechurch@gmail.com',
@@ -108,7 +163,7 @@ export const worshipSchedules: WorshipSchedule[] = [
     isOnlineLive: true,
     description: '오직 하나님께 영광을 돌리는 경건한 찬양과 성경 중심의 강해 설교로 드려지는 예배입니다.',
     orderSummary: [
-      '예배의 부름',
+      '예배로 부름',
       '찬양과 경배',
       '성시 교독 및 신앙고백',
       '대표 기도',
@@ -127,12 +182,10 @@ export const worshipSchedules: WorshipSchedule[] = [
     isOnlineLive: true,
     description: '말씀의 깊은 은혜를 나누고 뜨거운 찬양과 합심 기도로 한 주간 세상으로 나아갈 영적 능력을 공급받는 예배입니다.',
     orderSummary: [
-      '오프닝 찬양과 경배',
-      '공동 기도',
-      '성경 봉독',
-      '말씀 나눔과 성경 강해',
-      '합심 중보기도 (교회, 나라, 열방)',
-      '파송 찬양 및 축도'
+      '찬양과 경배',
+      '성경통독과 나눔',
+      '중보기도 (개인, 가정, 교회, 나라, 열방)',
+      '주기도문'
     ]
   }
 ];
