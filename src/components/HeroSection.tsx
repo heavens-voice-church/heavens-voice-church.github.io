@@ -31,7 +31,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 </span>
               </h1>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
-                고막리에서 들려오는 아름다운 복음의 소리, 하늘소리교회로 오세요.
+                고막리에서 들려오는 아름다운 복음의 소리, 하늘소리교회에 여러분을 초대합니다.
               </p>
             </div>
 
