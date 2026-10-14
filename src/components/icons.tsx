@@ -37,4 +37,5 @@ export {
   MagnifyingGlass as Search,
   Funnel as Filter,
   FolderOpen,
+  UsersThree as Users,
 } from '@phosphor-icons/react';

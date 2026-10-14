@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, churchOfficers } from '../data/churchData';
-import { Award, BookOpen, Quote, ShieldCheck, GraduationCap } from './icons';
+import { Award, BookOpen, Quote, ShieldCheck, GraduationCap, Users } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (
@@ -9,9 +9,16 @@ export const PastorSection: React.FC = () => {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
+            <Users className="w-3.5 h-3.5 text-sky-500" />
+            <span>함께 섬기는 공동체</span>
+          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회를 <span className="text-sky-600">섬기는 사람들</span>
           </h2>
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
+            말씀과 기도로 하늘소리교회 공동체를 세우고 섬기는 사람들을 소개합니다.
+          </p>
         </div>
 
         {/* Pastor Main Profile Card */}
