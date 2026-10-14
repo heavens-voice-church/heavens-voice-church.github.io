@@ -2,7 +2,6 @@ import React from 'react';
 import { worshipSchedules, churchInfo, monthlyServices } from '../data/churchData';
 import {
   Clock,
-  Radio,
   BookOpen,
   CalendarCheck
 } from './icons';
@@ -42,13 +41,6 @@ export const WorshipScheduleSection: React.FC = () => {
                   <span className="text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider bg-sky-50 text-sky-700 border border-sky-200">
                     {idx === 0 ? '주일 대예배' : '주일 찬양예배'}
                   </span>
-
-                  {item.isOnlineLive && (
-                    <span className="flex items-center gap-1.5 text-xs text-red-600 font-bold bg-red-50 px-2.5 py-1 rounded-full border border-red-200">
-                      <Radio className="w-3.5 h-3.5 animate-pulse" />
-                      {/* <span>YouTube LIVE</span> */}
-                    </span>
-                  )}
                 </div>
 
                 {/* Name & Time */}

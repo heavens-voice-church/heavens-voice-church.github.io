@@ -3,7 +3,6 @@ export interface WorshipSchedule {
   category: 'morning' | 'afternoon';
   name: string;
   dayTime: string;
-  isOnlineLive?: boolean;
   description?: string;
   orderSummary?: string[];
 }
@@ -74,8 +73,6 @@ export interface ChurchInfo {
   phone: string;
   email: string;
   officeHours: string;
-  youtubeChannel: string;
-  instagram: string;
   publicTransit: {
     subway?: { line: string; station: string; exit: string; walkingTime: string }[];
     bus: { stopName: string; walkingTime: string; note?: string }[];

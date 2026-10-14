@@ -104,14 +104,6 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   • 온라인 헌금 안내
                 </button>
               </li>
-              {/* <li>
-                <button
-                  onClick={() => onSelectTab('channel')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  • SNS 채널
-                </button>
-              </li> */}
             </ul>
           </div>
 

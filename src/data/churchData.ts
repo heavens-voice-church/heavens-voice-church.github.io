@@ -86,7 +86,7 @@ export const bulletinDriveUrl = '';
 export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',
   englishName: "Heaven's voice Church",
-  domainName: 'heavensvoicechurch.com',
+  domainName: 'www.heavensvoicechurch.com',
   slogan: '신앙은 복음적이고, 생명은 풍성하며, 삶은 거룩하게',
   subSlogan: '기독교대한복음교회 교단 정신에 따라 오직 성경과 복음의 진리 위에 서는 교회',
   denomination: '기독교대한복음교회',
@@ -138,8 +138,6 @@ export const churchInfo: ChurchInfo = {
   phone: '010-9849-2100',
   email: 'heavensvoicechurch@gmail.com',
   officeHours: '화요일 ~ 금요일 09:00 ~ 17:00',
-  youtubeChannel: 'https://www.youtube.com/@haneulsorichurch',
-  instagram: 'https://www.instagram.com/haneulsori_church',
   publicTransit: {
     bus: [
       { stopName: '고막리마을회관', walkingTime: '도보 약 5분', note: '교회에서 가장 가까운 정류장' },
@@ -160,7 +158,6 @@ export const worshipSchedules: WorshipSchedule[] = [
     category: 'morning',
     name: '주일 오전 예배',
     dayTime: '매주 주일 오전 11:00',
-    isOnlineLive: true,
     description: '오직 하나님께 영광을 돌리는 경건한 찬양과 성경 중심의 강해 설교로 드려지는 예배입니다.',
     orderSummary: [
       '예배로 부름',
@@ -179,7 +176,6 @@ export const worshipSchedules: WorshipSchedule[] = [
     category: 'afternoon',
     name: '주일 오후 예배',
     dayTime: '매주 주일 오후 01:30',
-    isOnlineLive: true,
     description: '말씀의 깊은 은혜를 나누고 뜨거운 찬양과 합심 기도로 한 주간 세상으로 나아갈 영적 능력을 공급받는 예배입니다.',
     orderSummary: [
       '찬양과 경배',
@@ -190,7 +186,7 @@ export const worshipSchedules: WorshipSchedule[] = [
   }
 ];
 
-// Single source of truth for displaying worship times elsewhere (Header, SocialMediaSection, etc.)
+// Single source of truth for displaying worship times elsewhere (Hero, etc.)
 // so the schedule never drifts out of sync with worshipSchedules above.
 const getSchedule = (category: WorshipSchedule['category']): WorshipSchedule =>
   worshipSchedules.find((w) => w.category === category)!;

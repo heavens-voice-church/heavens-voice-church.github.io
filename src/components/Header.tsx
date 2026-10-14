@@ -4,8 +4,7 @@ import {
   Menu,
   X,
   Navigation,
-  ChevronRight,
-  Youtube 
+  ChevronRight
 } from './icons';
 
 interface HeaderProps {
@@ -77,7 +76,6 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'prayer', label: '중보기도' },
     { id: 'archive', label: '자료실' },
     { id: 'offering', label: '헌금 안내' },
-    // { id: 'channel', label: '교회 SNS 채널' },  // temporarily disabled
   ];
 
   const handleTabClick = (id: string) => {
@@ -176,16 +174,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* Mobile Actions */}
-            <div className="mt-4 pt-3 border-t border-slate-200 grid grid-cols-2 gap-2">
-              {/* <a
-                href={churchInfo.youtubeChannel}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="py-2 px-3 rounded-xl bg-red-50 text-red-700 border border-red-200 text-xs font-bold flex items-center justify-center gap-1.5"
-              >
-                <Youtube className="w-4 h-4 text-red-600" />
-                <span>유튜브 채널</span>
-              </a> */}
+            <div className="mt-4 pt-3 border-t border-slate-200 grid grid-cols-1 gap-2">
               <a
                 href={kakaoMapToUrl}
                 target="_blank"

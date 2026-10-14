@@ -13,14 +13,13 @@ import { PhotoLightboxModal } from './components/PhotoLightboxModal';
 import { OnlineOfferingSection } from './components/OnlineOfferingSection';
 import { PrayerRequestSection } from './components/PrayerRequestSection';
 import { LocationSection } from './components/LocationSection';
-import { SocialMediaSection } from './components/SocialMediaSection';
 import { Footer } from './components/Footer';
 import { defaultCuratedPhotos } from './data/churchData';
 import { ChurchPhoto } from './types';
 import { trackPageView } from './utils/analytics';
 
 // Tab ids addressable via URL hash (e.g. '#worship'). 'home' has no hash.
-const HASH_TABS = ['intro', 'pastor', 'worship', 'archive', 'prayer', 'offering', 'location', 'channel'];
+const HASH_TABS = ['intro', 'pastor', 'worship', 'archive', 'prayer', 'offering', 'location'];
 
 const getTabFromHash = (): string => {
   const hash = window.location.hash.replace(/^#/, '');
@@ -28,7 +27,7 @@ const getTabFromHash = (): string => {
 };
 
 export default function App() {
-  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'archive' | 'prayer' | 'offering' | 'location' | 'channel'
+  // Tab state: 'home' | 'intro' | 'pastor' | 'worship' | 'archive' | 'prayer' | 'offering' | 'location'
   // Always 'home' on first render so prerendered HTML matches hydration; the real hash is applied in the effect.
   const [activeTab, setActiveTab] = useState<string>('home');
   const [selectedPhoto, setSelectedPhoto] = useState<ChurchPhoto | null>(null);
@@ -136,11 +135,6 @@ export default function App() {
           {/* Tab 6: 교회 위치 */}
           <section hidden={activeTab !== 'location'}>
             <LocationSection isActive={activeTab === 'location'} />
-          </section>
-
-          {/* Tab 7: 교회 채널 */}
-          <section hidden={activeTab !== 'channel'}>
-            <SocialMediaSection />
           </section>
 
         </div>
