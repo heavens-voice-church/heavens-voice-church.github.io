@@ -46,7 +46,7 @@ export const BrandLogo: React.FC<{ dark?: boolean }> = ({ dark }) => (
       <span className={`block text-xl font-bold tracking-tight leading-tight ${dark ? 'text-white' : 'text-slate-900'}`}>
         {churchInfo.name}
       </span>
-      <span className={`block text-[10px] tracking-wider uppercase font-semibold ${dark ? 'text-sky-400' : 'text-slate-400'}`}>
+      <span className={`block text-[9px] sm:text-[10px] whitespace-nowrap tracking-wider uppercase font-semibold ${dark ? 'text-sky-400' : 'text-slate-400'}`}>
         {churchInfo.englishName}
       </span>
     </span>

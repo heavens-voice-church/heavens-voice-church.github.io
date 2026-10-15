@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, churchOfficers } from '../data/churchData';
-import { Award, BookOpen, Quote, ShieldCheck, GraduationCap, Users } from './icons';
+import { BookOpen, Quote, GraduationCap, Users } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (
@@ -62,13 +62,14 @@ export const PastorSection: React.FC = () => {
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
-                  "{churchInfo.pastor.greetingTitle}"
+                  "복음의 진리 안에서 자유와 생명을 누리는 신앙 공동체에 오신 것을 환영합니다."
                 </h3>
 
                 <div className="space-y-3 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
-                  {churchInfo.pastor.greetingMessage.map((msg, mIdx) => (
-                    <p key={mIdx}>{msg}</p>
-                  ))}
+                  <p>하늘소리교회 웹페이지를 찾아주신 모든 성도님과 방문자 여러분을 주님의 이름으로 진심으로 환영하고 축복합니다.</p>
+                  <p>기독교대한복음교회는 "신앙은 복음적이고 생명적이어라, 신학은 충분히 학문적이어라, 교회는 한국인 자신의 교회이어라"라는 자랑스러운 3대 표어 위에 서 있습니다.</p>
+                  <p>우리 하늘소리교회는 형식적인 종교 생활을 넘어, 예수 그리스도의 십자가 복음과 참된 생명의 말씀을 삶 속에서 실천하는 거룩한 공동체입니다.</p>
+                  <p>주일 오전과 오후, 온 성도가 한마음으로 드리는 정결한 예배를 통해 하늘의 평강과 영적 치유를 경험하시기를 간절히 기도합니다.</p>
                 </div>
 
                 {/* Pastor Favorite Scripture */}

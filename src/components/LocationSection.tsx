@@ -137,24 +137,20 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
         {/* Church Direct Contact Grid (Prominent Contact Info) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          {/* 1. Phone */}
-          <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
+          {/* 1. Phone: the whole card dials on phones; on md+ the link is inert (pointer-events-none) */}
+          <a
+            href={`tel:${churchInfo.phone.replace(/\D/g, '')}`}
+            className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4 active:bg-sky-50 md:pointer-events-none"
+          >
             <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-xs">
               <Phone className="w-5 h-5" />
             </div>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">대표전화 / 목양실</span>
-              {/* tel: link only on phones (below md); desktop shows plain text */}
-              <a
-                href={`tel:${churchInfo.phone}`}
-                className="md:hidden block text-base sm:text-lg font-bold text-slate-900 hover:text-sky-600 transition-colors"
-              >
-                {churchInfo.phone}
-              </a>
-              <p className="hidden md:block text-base sm:text-lg font-bold text-slate-900">{churchInfo.phone}</p>
+              <p className="text-base sm:text-lg font-bold text-slate-900">{churchInfo.phone}</p>
               <p className="md:hidden text-[11px] text-sky-600 font-medium">터치 시 바로 전화 연결</p>
             </div>
-          </div>
+          </a>
 
           {/* 2. Office Hours */}
           <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
@@ -224,16 +220,6 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
               <span>길찾기</span>
               <ExternalLink className="w-3.5 h-3.5 text-[#191919]/70" />
             </a>
-
-            {/* <a
-              href={kakaoMapDirectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 md:flex-initial px-4 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 text-xs font-bold transition-colors flex items-center justify-center gap-1.5 shadow-xs"
-            >
-              <span>지도</span>
-              <ExternalLink className="w-3 h-3 text-slate-500" />
-            </a> */}
           </div>
         </div>
 
@@ -249,24 +235,6 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
                 <span className="w-2.5 h-2.5 rounded-full bg-[#FEE500] inline-block" />
                 <span className="font-bold text-white">카카오맵</span>
                 <span className="text-[10px] text-slate-400">하늘소리교회 위치</span>
-              </div>
-
-              <div className="flex items-center gap-1.5">
-                {/*
-                <button
-                  disabled
-                  className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-500 cursor-not-allowed opacity-60"
-                >
-                  교통정보
-                </button>
-                <button
-                  disabled
-                  className="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-slate-800 text-slate-500 cursor-not-allowed opacity-60 flex items-center gap-1"
-                >
-                  <Eye className="w-3 h-3 text-slate-500" />
-                  <span>로드뷰</span>
-                </button>
-                */}
               </div>
             </div>
 

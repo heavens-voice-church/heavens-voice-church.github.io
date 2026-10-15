@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { churchInfo } from '../data/churchData';
 import { Heart, ShieldCheck, Check } from './icons';
 
 // Google Apps Script web app URL (see apps-script/prayer-request.gs). Empty → form shows "준비 중".

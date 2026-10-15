@@ -1,5 +1,5 @@
 import React from 'react';
-import { worshipSchedules, churchInfo, monthlyServices } from '../data/churchData';
+import { worshipSchedules, monthlyServices } from '../data/churchData';
 import {
   Clock,
   BookOpen,

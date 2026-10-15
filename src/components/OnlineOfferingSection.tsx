@@ -107,13 +107,13 @@ export const OnlineOfferingSection: React.FC = () => {
                 return (
                   <div
                     key={acc.id}
-                    className="bg-white rounded-3xl p-7 border border-slate-200 shadow-xs hover:shadow-md hover:border-sky-400 transition-all duration-300 flex flex-col justify-between space-y-6"
+                    className="bg-white rounded-3xl p-5 sm:p-7 border border-slate-200 shadow-xs hover:shadow-md hover:border-sky-400 transition-all duration-300 flex flex-col justify-between space-y-6"
                   >
                     <div className="space-y-4">
                       {/* Top Badges */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <span className="px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold text-sky-700">
+                          <span className="whitespace-nowrap px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-xs font-bold text-sky-700">
                             {acc.category}
                           </span>
                           <span className="text-xs font-semibold text-slate-700 flex items-center gap-1">
@@ -139,19 +139,19 @@ export const OnlineOfferingSection: React.FC = () => {
                       </div>
 
                       {/* Account Number Display Box */}
-                      <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
+                      <div className="p-3 sm:p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between gap-3">
                         <div>
                           <span className="text-[10px] text-slate-500 uppercase tracking-wider block">
                             {acc.bank} 전용 계좌번호
                           </span>
-                          <span className="text-lg sm:text-xl font-bold text-slate-900 tracking-wider">
+                          <span className="block text-[15px] sm:text-xl font-bold text-slate-900 sm:tracking-wider whitespace-nowrap">
                             {acc.accountNumber}
                           </span>
                         </div>
 
                         <button
                           onClick={() => handleCopyFormatted(acc)}
-                          className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ${
+                          className={`shrink-0 px-3 sm:px-4 py-2.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs ${
                             isCopied
                               ? 'bg-sky-500 text-white'
                               : 'bg-white border border-slate-200 hover:bg-slate-100 text-slate-700'

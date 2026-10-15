@@ -23,11 +23,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
             {/* Main Catchphrase (lg:pb-8 nudges it up toward the badge within justify-between) */}
             <div className="space-y-4 lg:pb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] font-bold tracking-tighter text-slate-900 leading-[1.25]">
+              <h1 className="text-[length:min(1.875rem,calc((100vw-2rem)/12.6))] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] font-bold tracking-tighter text-slate-900 leading-[1.25]">
                 <span className="font-serif-kr">
                   <span className="text-[length:calc(1em-2px)]">은혜의 50년</span><br />
                   {/* opening quote hangs into the left gutter so "하" sits on the shared left line */}
-                  <span className="text-sky-600"><span className="absolute -translate-x-full">"</span>하늘소리, 세상의 빛이어라"</span>
+                  <span className="text-sky-600 whitespace-nowrap"><span className="absolute -translate-x-full">"</span>하늘소리, 세상의 빛이어라"</span>
                 </span>
               </h1>
               {/* 2026 motto verse */}

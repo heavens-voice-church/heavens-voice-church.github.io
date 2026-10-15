@@ -6,8 +6,6 @@ import {
   Search,
   Maximize2,
   Calendar,
-  Camera,
-  Filter,
   FolderOpen,
   ExternalLink
 } from './icons';

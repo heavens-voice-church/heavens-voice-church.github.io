@@ -43,13 +43,6 @@ export interface OfferingAccount {
 export interface PastorInfo {
   name: string;
   title: string;
-  denomination: string;
-  greetingTitle: string;
-  greetingMessage: string[];
-  philosophy: {
-    title: string;
-    description: string;
-  }[];
   education: string[];
   photoUrl: string;
   bibleVerse: {
@@ -71,12 +64,10 @@ export interface ChurchInfo {
   postalCode: string;
   phone: string;
   email: string;
-  officeHours: string;
   publicTransit: {
     subway?: { line: string; station: string; exit: string; walkingTime: string }[];
     bus: { stopName: string; walkingTime: string; note?: string }[];
     car: string[];
     parking: string;
   };
-  offeringAccounts: OfferingAccount[];
 }

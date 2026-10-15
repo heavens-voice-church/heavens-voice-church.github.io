@@ -7,26 +7,14 @@ export const ChurchIntroSection: React.FC = () => {
     {
       number: '01',
       title: '신앙은 복음적이고 생명적이어라',
-      engTitle: 'Evangelical & Vital Faith',
-      description:
-        '인간의 전통이나 권위보다 하나님의 말씀인 성경과 예수 그리스도의 복음을 중심에 두고, 살아서 역사하는 생명력 있는 신앙을 지향합니다.',
-      points: ['오직 성경과 복음 중심', '생명력 있는 구원의 체험', '성령의 역사하심 고백']
     },
     {
       number: '02',
       title: '신학은 충분히 학문적이어라',
-      engTitle: 'Academic Theology',
-      description:
-        '맹목적인 신앙을 배격하며, 성경과 신앙의 고백을 학문적이고 건전한 비판력을 가지고 충분히 연구하고 성찰합니다.',
-      points: ['지성과 영성의 균형', '깊이 있는 성경 연구', '시대와 소통하는 신학']
     },
     {
       number: '03',
       title: '교회는 한국인 자신의 교회이어라',
-      engTitle: 'Indigenous Korean Church',
-      description:
-        '외국 선교회의 지배나 주관에서 벗어나 한국인의 정신과 자립적인 책임 아래 한국인의 심성에 어울리는 참된 한국인 자신의 교회를 세워갑니다.',
-      points: ['민족의 역사적 책임 감당', '자립과 자치의 교회', '한국인의 심성을 품은 복음화']
     }
   ];
 
