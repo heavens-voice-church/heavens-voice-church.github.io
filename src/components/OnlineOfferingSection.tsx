@@ -300,14 +300,14 @@ export const OnlineOfferingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                 <h4 className="font-bold text-slate-900 text-sm">종이 영수증 및 직인 원본 발급 신청</h4>
                 <p className="text-slate-600">
-                  회사 제출용 종이 기부금 영수증 및 소속교단({churchInfo.denomination}) 증명서가 필요하신 분은 전화({churchInfo.phone})로 신청하시면 발급 진행을 도움드립니다.
+                  회사 제출용 종이 기부금 영수증 및 소속교단({churchInfo.denomination}) 증명서가 필요하신 분은 전화로 신청하시면 발급 진행을 도움드립니다.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-sky-700 block font-semibold">기부금 영수증 문의 직통</span>
-                  <strong className="text-sm text-slate-900">{churchInfo.phone} (화~금요일 09:00~17:00)</strong>
+                  <strong className="text-sm text-slate-900">{churchInfo.phone} <br/> (화~금요일 09:00~17:00)</strong>
                 </div>
                 <a
                   href={`tel:${churchInfo.phone}`}
