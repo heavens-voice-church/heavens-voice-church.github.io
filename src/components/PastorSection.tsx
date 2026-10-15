@@ -27,15 +27,19 @@ export const PastorSection: React.FC = () => {
 
             {/* Left: Pastor Photo (compact) */}
             <div className="lg:col-span-4 p-8 sm:p-10 lg:p-12 lg:pr-4 flex flex-col items-center justify-center text-center">
-              {/* Temporary illustration; when a real photo is ready, add it to public/ and point pastor.photoUrl at it */}
-              <img
-                src={churchInfo.pastor.photoUrl}
-                alt={`하늘소리교회 ${churchInfo.pastor.name}와 교인들 일러스트`}
-                width={1200}
-                height={800}
-                loading="lazy"
-                className="w-full max-w-sm rounded-2xl"
-              />
+              {/* Placeholder until the pastor's photo arrives: add it to public/ and set pastor.photoUrl */}
+              {churchInfo.pastor.photoUrl ? (
+                <img
+                  src={churchInfo.pastor.photoUrl}
+                  alt={`하늘소리교회 ${churchInfo.pastor.title} ${churchInfo.pastor.name}`}
+                  loading="lazy"
+                  className="w-full max-w-sm rounded-2xl"
+                />
+              ) : (
+                <div className="w-full max-w-sm aspect-4/3 rounded-2xl border-2 border-dashed border-sky-700/60 bg-white/5 flex items-center justify-center text-sm text-sky-200/80">
+                  사진 첨부 예정
+                </div>
+              )}
 
               <div className="mt-5">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white">
