@@ -311,7 +311,7 @@ export const OnlineOfferingSection: React.FC = () => {
                 </div>
                 <a
                   href={`tel:${churchInfo.phone}`}
-                  className="px-4 py-2 rounded-xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition-colors shadow-xs"
+                  className="md:hidden px-4 py-2 rounded-xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition-colors shadow-xs"
                 >
                   전화 연결
                 </a>

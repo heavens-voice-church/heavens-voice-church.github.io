@@ -144,13 +144,15 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             </div>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">대표전화 / 목양실</span>
+              {/* tel: link only on phones (below md); desktop shows plain text */}
               <a
                 href={`tel:${churchInfo.phone}`}
-                className="block text-base sm:text-lg font-bold text-slate-900 hover:text-sky-600 transition-colors"
+                className="md:hidden block text-base sm:text-lg font-bold text-slate-900 hover:text-sky-600 transition-colors"
               >
                 {churchInfo.phone}
               </a>
-              <p className="text-[11px] text-sky-600 font-medium">터치 시 바로 전화 연결</p>
+              <p className="hidden md:block text-base sm:text-lg font-bold text-slate-900">{churchInfo.phone}</p>
+              <p className="md:hidden text-[11px] text-sky-600 font-medium">터치 시 바로 전화 연결</p>
             </div>
           </div>
 
@@ -160,11 +162,11 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
               <Clock className="w-5 h-5" />
             </div>
             <div className="space-y-1 text-left min-w-0">
-              <span className="text-xs font-semibold text-slate-500">사무실 상담/안내 시간</span>
+              <span className="text-xs font-semibold text-slate-500">상담/안내 시간</span>
               <p className="text-sm font-bold text-slate-900">
                 09:00 ~ 17:00
               </p>
-              <p className="text-[11px] text-slate-500">월~토요일 운영</p>
+              <p className="text-[11px] text-slate-500">화~금요일 운영</p>
             </div>
           </div>
 

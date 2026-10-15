@@ -257,22 +257,28 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
 
         {/* Tab: 주보 (Google Drive) */}
         {archiveTab === 'bulletins' && (
-          bulletinDriveUrl ? (
-            <div className="max-w-3xl mx-auto rounded-2xl border border-slate-200 bg-slate-50 p-10 text-center space-y-4">
-              <p className="text-sm text-slate-600">매주 주보는 Google Drive에서 보실 수 있습니다.</p>
+          <div className="max-w-3xl mx-auto rounded-2xl border border-slate-200 bg-slate-50 p-10 text-center space-y-4">
+            <p className="text-sm text-slate-600">매주 주보는 Google Drive에서 보실 수 있습니다.</p>
+            {bulletinDriveUrl ? (
               <a
                 href={bulletinDriveUrl}
                 target="_blank"
                 rel="noopener"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-sm font-bold transition-colors shadow-xs"
               >
-                주보 보기 (Google Drive)
+                주보 보기
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </div>
-          ) : (
-            <EmptyState text="주보를 준비하고 있습니다." />
-          )
+            ) : (
+              <>
+                <span aria-disabled="true" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-300 text-white text-sm font-bold cursor-not-allowed">
+                  주보 보기
+                  <ExternalLink className="w-4 h-4" />
+                </span>
+                <p className="text-xs text-slate-400">주보 링크를 준비하고 있습니다.</p>
+              </>
+            )}
+          </div>
         )}
 
       </div>
