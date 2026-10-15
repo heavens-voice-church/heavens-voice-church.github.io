@@ -66,14 +66,14 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
             하늘소리교회 <span className="text-sky-600">자료실</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
-            교회 행사 일정과 사진, 암송 구절, 주보를 한곳에서 확인하실 수 있습니다.
+            교회 행사 일정과 암송 구절, 주보를 한곳에서 확인하실 수 있습니다.
           </p>
         </div>
 
         {/* Archive Sub-Tabs */}
         <div className="flex justify-center">
           <div className="inline-flex flex-wrap justify-center p-1 bg-slate-100 rounded-2xl border border-slate-200 gap-1">
-            {archiveTabs.map((t) => (
+            {archiveTabs.filter((t) => t.id !== 'photos' || SHOW_CHURCH_PHOTOS).map((t) => (
               <button
                 key={t.id}
                 onClick={() => setArchiveTab(t.id)}
@@ -123,9 +123,6 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
         )}
 
         {/* Tab: 사진 */}
-        {archiveTab === 'photos' && !SHOW_CHURCH_PHOTOS && (
-          <EmptyState text="교회 사진을 준비하고 있습니다." />
-        )}
         {archiveTab === 'photos' && SHOW_CHURCH_PHOTOS && (
           <>
           {/* Filter and Search Bar */}
@@ -235,30 +232,26 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
           </>
         )}
 
-        {/* Tab: 암송 구절 (image cards, like church photos) */}
+        {/* Tab: 암송 구절 */}
         {archiveTab === 'verses' && (
           memoryVerses.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {memoryVerses.map((v) => (
-                <a
-                  key={v.id}
-                  href={v.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-xs hover:shadow-lg hover:border-sky-400 transition-all text-left"
-                >
-                  <div className="aspect-4/3 overflow-hidden bg-slate-100">
-                    <img src={v.url} alt={v.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="space-y-6">
+            <h3 className="text-xl font-bold text-slate-900 text-center">{yearMotto.year}년 하늘소리교회 암송 말씀</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto text-left">
+              {/* data is kept in month order; show the latest month first */}
+              {[...memoryVerses].reverse().map((v) => (
+                <div key={v.month} className="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs hover:border-sky-400 hover:shadow-md transition-all space-y-3">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="px-3 py-1 rounded-full bg-sky-500 text-white text-xs font-bold">{v.month}</span>
+                    <span className="text-xs font-semibold text-sky-700">{v.reference}</span>
                   </div>
-                  <div className="p-4">
-                    <h4 className="text-sm font-bold text-slate-900 group-hover:text-sky-600">{v.title}</h4>
-                    {v.date && <p className="text-[11px] text-slate-500 mt-1">{v.date}</p>}
-                  </div>
-                </a>
+                  <p className="font-serif-kr text-sm sm:text-base text-slate-800 leading-relaxed whitespace-pre-line break-keep">{v.verse}</p>
+                </div>
               ))}
             </div>
+            </div>
           ) : (
-            <EmptyState text="1~10월 암송 구절을 준비하고 있습니다." />
+            <EmptyState text="암송 구절을 준비하고 있습니다." />
           )
         )}
 

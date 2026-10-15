@@ -24,10 +24,9 @@ export interface ChurchEvent {
 }
 
 export interface MemoryVerse {
-  id: string;
-  title: string; // e.g. '1월 암송 구절'
-  url: string;   // image path, e.g. `${import.meta.env.BASE_URL}verses/2026-01.jpg`
-  date?: string;
+  month: string;     // e.g. '1월'
+  reference: string; // e.g. '요한복음 3:16'
+  verse: string;     // '\n' marks a line break
 }
 
 export interface OfferingAccount {
