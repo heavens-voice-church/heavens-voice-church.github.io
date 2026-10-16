@@ -132,7 +132,7 @@ export const memoryVerses: MemoryVerse[] = [
 ];
 
 // 자료실 > 주보: Google Drive 공유 링크를 넣으면 '주보 보기' 버튼이 표시됨
-export const bulletinDriveUrl = '';
+export const bulletinDriveUrl = 'https://drive.google.com/drive/folders/15gvkKO0_r22Tur9dcIjPGNAg_ipKmVqu';
 
 export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',

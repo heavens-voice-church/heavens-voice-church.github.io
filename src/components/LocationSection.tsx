@@ -160,7 +160,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">상담/안내 시간</span>
               <p className="text-sm font-bold text-slate-900">
-                09:00 ~ 17:00
+                10:00 ~ 17:00
               </p>
               <p className="text-[11px] text-slate-500">화~금요일 운영</p>
             </div>

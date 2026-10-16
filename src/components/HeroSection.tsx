@@ -23,6 +23,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
             {/* Main Catchphrase (lg:pb-8 nudges it up toward the badge within justify-between) */}
             <div className="space-y-4 lg:pb-8">
+              {/* w-fit wrapper = headline width, so the verse reference can right-align to the end of the motto line */}
+              <div className="w-fit space-y-2">
               <h1 className="text-[length:min(1.875rem,calc((100vw-2rem)/12.6))] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] font-bold tracking-tighter text-slate-900 leading-[1.25]">
                 <span className="font-serif-kr">
                   <span className="text-[length:calc(1em-2px)]">은혜의 50년</span><br />
@@ -31,9 +33,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 </span>
               </h1>
               {/* 2026 motto verse */}
-              <p className="-mt-2 font-serif-kr text-sky-700 text-base sm:text-lg">
-                {yearMotto.verse} <span className="text-slate-500 text-sm">({yearMotto.reference})</span>
+              <p className="flex flex-wrap items-baseline justify-between gap-x-3 font-serif-kr text-sky-700 text-base sm:text-lg">
+                <span>{yearMotto.verse}</span>
+                <span className="ml-auto text-slate-500 text-sm">({yearMotto.reference})</span>
               </p>
+              </div>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
                 고막리에서 들려오는 아름다운 복음의 소리, 하늘소리교회에 여러분을 초대합니다.
               </p>
