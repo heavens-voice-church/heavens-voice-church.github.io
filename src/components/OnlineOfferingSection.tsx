@@ -307,7 +307,7 @@ export const OnlineOfferingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-sky-700 block font-semibold">기부금 영수증 문의 직통</span>
-                  <strong className="text-sm text-slate-900">{churchInfo.phone} <br/> (화~금요일 09:00~17:00)</strong>
+                  <strong className="text-sm text-slate-900">{churchInfo.phone} <br/> (화~금요일 10:00~17:00)</strong>
                 </div>
                 <a
                   href={`tel:${churchInfo.phone}`}

@@ -28,11 +28,8 @@ export const ChurchIntroSection: React.FC = () => {
             <span>{churchInfo.denomination} {churchInfo.name}</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            교회 소개 및 <span className="text-sky-600">3대 신앙 지침</span>
+            교회 소개
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            {churchInfo.subSlogan}
-          </p>
         </div>
 
         {/* Introduction / History / Denomination tenets, stacked vertically */}
@@ -80,7 +77,7 @@ export const ChurchIntroSection: React.FC = () => {
           </div>
 
           {/* 기독교대한복음교회 3대 신앙 지침 */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
+          {/* <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
             <div className="flex items-center gap-2 text-sky-600">
               <ShieldCheck className="w-5 h-5" />
               <h3 className="text-lg sm:text-xl font-bold text-slate-900">기독교대한복음교회 3대 신앙 지침</h3>
@@ -95,7 +92,7 @@ export const ChurchIntroSection: React.FC = () => {
                 </li>
               ))}
             </ol>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
