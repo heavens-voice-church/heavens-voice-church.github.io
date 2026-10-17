@@ -145,7 +145,6 @@ export const PrayerRequestSection: React.FC = () => {
             </button>
 
             <p className="flex items-center justify-center gap-1.5 text-[11px] text-slate-500">
-              <ShieldCheck className="w-3.5 h-3.5 text-sky-500" />
               보내주신 기도 제목은 공개 범위에 따라 담임목사 또는 중보기도팀만 확인합니다.
             </p>
           </form>

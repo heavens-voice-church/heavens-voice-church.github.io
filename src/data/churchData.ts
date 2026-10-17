@@ -33,12 +33,7 @@ export const yearMotto = {
 export const churchIntro = {
   paragraphs: [
     '하늘소리교회는 기독교대한복음교회에 속한 교회로 1976년 창립되어, 2006년 이곳 김포시 월곶면으로 이전하였고, 2023년 교회 이름 천성교회를 순우리말인 하늘소리교회로 변경하였습니다.',
-    '그동안 헌신적인 목회자들이 목회하였고, 팬데믹 이후 2023년부터 설교목사 중 한 분이었던 유숙연 목사가 7대 담임목회자로 청빙되어 2026년 2월 8일 취임식을 하고, 복음적인 말씀 선포와 청년 중심의 교육과 섬김의 훈련을 통하여 아름다운 공동체로 나아가고 있습니다.'
-  ],
-  invitation: [
-    '말씀이 살아있고, 아름다운 성만찬을 나누는 교회,',
-    '청년을 사랑하는 교회, 자연 친화적인 교회,',
-    '함께 기뻐하고 함께 슬퍼하는 믿음 공동체, 하늘소리교회로 여러분을 초대합니다.'
+    '헌신적인 목회자들이 목회하였고 팬데믹 이후 2023년부터 설교목사 중 한분이었던 유숙연목사가 7대 담임목회자로 청빙되어 2026년 2월 8일 취임식을 하고, 복음적인 말씀선포와 청년중심의 교육과 섬김의 훈련을 하면서 아름다운 공동체로 나아가고 있습니다.'
   ]
 };
 
@@ -75,7 +70,7 @@ export const monthlyServices = [
 ];
 
 // 자료실 > 사진 탭: 사진 정리가 끝나면 true로 바꿔 탭과 사진을 다시 노출
-export const SHOW_CHURCH_PHOTOS = false;
+export const SHOW_CHURCH_PHOTOS = true;
 
 // 자료실 > 암송 구절 (2026년 1~10월, 원본: 매월 암송 말씀.hwp)
 export const memoryVerses: MemoryVerse[] = [
@@ -155,7 +150,7 @@ export const churchInfo: ChurchInfo = {
       '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사',
       '이화여자대학교 신학대학원 졸업(Th.M)',
     ],
-    photoUrl: "", // 사진 준비되면 public/에 넣고 경로 지정 (비어 있으면 "사진 첨부 예정" 표시)
+    photoUrl: `${import.meta.env.BASE_URL}pastor.jpg`, // 비우면 "사진 첨부 예정" 표시 (원본: archive/pastor.png)
     bibleVerse: {
       verse: '기뻐하는 사람들과 함께 기뻐하고, 우는 사람들과 함께 우십시오',
       reference: '로마서 12장 15절(새번역)'
@@ -223,41 +218,42 @@ export const getWorshipTimeLabel = (category: WorshipSchedule['category']): stri
   getSchedule(category).dayTime.replace('매주 주일 ', '');
 
 
+// 자료실 > 사진 (웹용 사본: public/gallery/, 1600px·위치정보 제거)
 export const defaultCuratedPhotos: ChurchPhoto[] = [
-  {
-    id: 'photo-1',
-    title: '하늘소리교회 예배당 전경',
-    category: 'fellowship',
-    categoryLabel: '성도의 교제 & 전경',
-    url: `${import.meta.env.BASE_URL}church-main.jpg`,
-    date: '2024.08',
-    description: '김포 문수산 자락 아래 자리 잡은 아름다운 하늘소리교회 예배당 전경입니다.'
+    {
+    id: 'photo-church',
+    title: '하늘소리교회 정면',
+    category: 'view',
+    categoryLabel: '주변 풍경',
+    url: `${import.meta.env.BASE_URL}gallery/church.png`,
+    date: '2026.09',
+    description: '김포시 월곶면 고막리에 자리한 하늘소리교회의 정면 모습입니다.'
   },
   {
-    id: 'photo-2',
-    title: '주일 오전 예배 찬양과 기도',
-    category: 'worship',
-    categoryLabel: '주일 예배',
-    url: `${import.meta.env.BASE_URL}church-main.jpg`,
-    date: '2024.08',
-    description: '하나님의 임재를 사모하며 영과 진리로 올려드리는 경건한 예배의 순간입니다.'
+    id: 'photo-inside',
+    title: '하늘소리교회 예배당',
+    category: 'space',
+    categoryLabel: '교회 공간',
+    url: `${import.meta.env.BASE_URL}gallery/inside1.jpg`,
+    date: '2026.10',
+    description: '주일 예배와 기도 모임이 드려지는 하늘소리교회 예배당입니다.'
   },
   {
-    id: 'photo-3',
-    title: '성도들의 따뜻한 교제',
-    category: 'fellowship',
-    categoryLabel: '성도의 교제 & 전경',
-    url: `${import.meta.env.BASE_URL}church-main.jpg`,
-    date: '2024.07',
-    description: '예배 후 서로를 축복하고 사랑으로 섬기는 하늘소리 공동체의 모습입니다.'
+    id: 'photo-library',
+    title: '교회 도서관',
+    category: 'space',
+    categoryLabel: '교회 공간',
+    url: `${import.meta.env.BASE_URL}gallery/library1.jpg`,
+    date: '2026.10',
+    description: '신앙 서적과 성경 자료를 함께 읽고 나누는 교회 도서관입니다.'
   },
   {
-    id: 'photo-4',
-    title: '교단 및 특별 연합 행사',
-    category: 'season',
-    categoryLabel: '교단 및 특별행사',
-    url: `${import.meta.env.BASE_URL}church-main.jpg`,
-    date: '2024.06',
-    description: '기독교대한복음교회 복음 정신을 되새기며 복음 전파를 다짐하는 특별 집회입니다.'
+    id: 'photo-view',
+    title: '고막저수지 전경',
+    category: 'view',
+    categoryLabel: '주변 풍경',
+    url: `${import.meta.env.BASE_URL}gallery/view1.jpg`,
+    date: '2026.10',
+    description: '교회 가까이 자리한 고막저수지의 평화로운 전경입니다.'
   }
 ];

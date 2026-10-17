@@ -10,7 +10,7 @@ export interface WorshipSchedule {
 export interface ChurchPhoto {
   id: string;
   title: string;
-  category: 'worship' | 'fellowship' | 'season';
+  category: 'space' | 'view';
   categoryLabel: string;
   url: string;
   date: string;

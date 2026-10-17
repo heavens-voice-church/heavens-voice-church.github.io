@@ -3,21 +3,6 @@ import { churchInfo, churchIntro, churchHistory } from '../data/churchData';
 import { ShieldCheck, BookOpen, Calendar } from './icons';
 
 export const ChurchIntroSection: React.FC = () => {
-  const gospelCoreValues = [
-    {
-      number: '01',
-      title: '신앙은 복음적이고 생명적이어라',
-    },
-    {
-      number: '02',
-      title: '신학은 충분히 학문적이어라',
-    },
-    {
-      number: '03',
-      title: '교회는 한국인 자신의 교회이어라',
-    }
-  ];
-
   return (
     <div id="intro" className="py-12 sm:py-16 bg-white text-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -32,7 +17,7 @@ export const ChurchIntroSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Introduction / History / Denomination tenets, stacked vertically */}
+        {/* Introduction / History / Denomination overview, stacked vertically */}
         <div className="max-w-4xl mx-auto space-y-6 text-left">
           {/* 하늘소리교회 소개 */}
           <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
@@ -45,11 +30,6 @@ export const ChurchIntroSection: React.FC = () => {
                 <p key={i}>{p}</p>
               ))}
             </div>
-            <blockquote className="border-l-4 border-sky-400 bg-sky-50/60 rounded-r-2xl px-5 py-4 text-sm sm:text-base text-sky-800 font-medium leading-relaxed break-keep">
-              {churchIntro.invitation.map((line, i) => (
-                <span key={i} className="block">{i === 0 && '"'}{line}{i === churchIntro.invitation.length - 1 && '"'}</span>
-              ))}
-            </blockquote>
           </div>
 
           {/* 교회 연혁 */}
@@ -76,23 +56,40 @@ export const ChurchIntroSection: React.FC = () => {
             )}
           </div>
 
-          {/* 기독교대한복음교회 3대 신앙 지침 */}
-          {/* <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
+          {/* 기독교대한복음교회 교단 개요 */}
+          <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
             <div className="flex items-center gap-2 text-sky-600">
               <ShieldCheck className="w-5 h-5" />
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900">기독교대한복음교회 3대 신앙 지침</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">기독교대한복음교회 교단 소개</h3>
             </div>
-            <ol className="divide-y divide-slate-100">
-              {gospelCoreValues.map((pillar) => (
-                <li key={pillar.number} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
-                  <span className="w-9 h-9 shrink-0 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center font-bold text-sm border border-sky-100">
-                    {pillar.number}
-                  </span>
-                  <span className="text-base font-bold text-slate-900">{pillar.title}</span>
-                </li>
-              ))}
-            </ol>
-          </div> */}
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+              우리 교회가 속한 기독교대한복음교회 교단 개요 및 특징입니다.
+            </p>
+            <dl className="divide-y divide-slate-100 text-sm sm:text-base">
+              <div className="grid grid-cols-1 sm:grid-cols-[7rem_1fr] gap-1 sm:gap-4 py-4 first:pt-0">
+                <dt className="font-bold text-sky-700">설립</dt>
+                <dd className="text-slate-600 leading-relaxed">
+                  1935년 12월 22일 '한국인 자신의 교회'를 선언하며 서양으로부터 도입된 근본주의 신앙과 신학에 대한 반성과 쇄신의 개혁 운동을 시작으로 '소하고 순한 교회'에 정의, 평화, 창조질서보전의 생명신앙을 담고, 최태용 목사가 창립한 자생적 토착 개신교단입니다.
+                </dd>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-[7rem_1fr] gap-1 sm:gap-4 py-4">
+                <dt className="font-bold text-sky-700">3대 표어</dt>
+                <dd>
+                  <ul className="space-y-1.5 text-slate-800 font-semibold">
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0" />신앙은 복음적이고 생명적이어라</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0" />신학은 충분히 학문적이어라</li>
+                    <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0" />교회는 한국인 자신의 교회이어라</li>
+                  </ul>
+                </dd>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-[7rem_1fr] gap-1 sm:gap-4 py-4 last:pb-0">
+                <dt className="font-bold text-sky-700">소속 협의체</dt>
+                <dd className="text-slate-600 leading-relaxed">
+                  한국기독교교회협의회(NCCK) 및 아시아기독교협의회(CCA)의 정식 회원 교단입니다.
+                </dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
     </div>

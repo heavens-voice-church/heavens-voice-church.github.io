@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, churchOfficers } from '../data/churchData';
-import { BookOpen, Quote, GraduationCap, Users } from './icons';
+import { Quote, GraduationCap, Users } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (
@@ -32,8 +32,10 @@ export const PastorSection: React.FC = () => {
                 <img
                   src={churchInfo.pastor.photoUrl}
                   alt={`하늘소리교회 ${churchInfo.pastor.title} ${churchInfo.pastor.name}`}
+                  width={900}
+                  height={1205}
                   loading="lazy"
-                  className="w-full max-w-sm rounded-2xl"
+                  className="w-full max-w-[240px] lg:max-w-[260px] rounded-2xl shadow-lg"
                 />
               ) : (
                 <div className="w-full max-w-sm aspect-4/3 rounded-2xl border-2 border-dashed border-sky-700/60 bg-white/5 flex items-center justify-center text-sm text-sky-200/80">
@@ -62,27 +64,22 @@ export const PastorSection: React.FC = () => {
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
-                  "복음의 진리 안에서 자유와 생명을 누리는 신앙 공동체에 오신 것을 환영합니다."
+                  "우리 교회를 찾아주신 성도님들과 방문자 여러분을 환영합니다."
                 </h3>
 
                 <div className="space-y-3 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
-                  <p>하늘소리교회 웹페이지를 찾아주신 모든 성도님과 방문자 여러분을 주님의 이름으로 진심으로 환영하고 축복합니다. 기독교대한복음교회는 "신앙은 복음적이고 생명적이어라, 
-                     신학은 충분히 학문적이어라, 교회는 한국인 자신의 교회이어라"라는 자랑스러운 3대 표어 위에 서 있습니다.
-                     <br/> 우리 하늘소리교회는 형식적인 종교 생활을 넘어, 예수 그리스도의 십자가 복음과 참된 생명의 말씀을 삶 속에서 
-                     <br/>실천하는 거룩한 공동체입니다. 주일에 온 성도가 한마음으로 드리는 정결한 예배를 통해 하늘의 평강과 영적 치유를 경험하시기를 간절히 기도합니다.</p>
+                  <p>하늘소리교회는 교회의 본래적 의미를 잃어가는 교권주의와 제도화를 경계하고, 말씀을 중심으로 
+                    <br/>그리스도의 십자가와 부활, 다시 오실 주님을 힘써 전하며 주님의 사랑을 삶 속에서 실천하고자 애쓰는 
+                    <br/>거룩한 공동체입니다.</p>
                 </div>
 
-                {/* Pastor Favorite Scripture */}
-                <div className="p-4 rounded-xl bg-sky-950/60 border border-sky-700/50 space-y-1 mt-4">
-                  <div className="flex items-center gap-2 text-sky-300 text-xs font-semibold">
-                    <BookOpen className="w-4 h-4 text-sky-400" />
-                    <span>목회 성구</span>
-                  </div>
-                  <p className="text-white text-sm italic">
-                    "{churchInfo.pastor.bibleVerse.verse}"
-                  </p>
-                  <p className="text-xs text-sky-300 font-medium text-right">
-                    - {churchInfo.pastor.bibleVerse.reference}
+                {/* Invitation (in the box that used to hold 목회 성구) */}
+                <div className="p-4 rounded-xl bg-sky-950/60 border border-sky-700/50 mt-4">
+                  <p className="text-sky-50 text-sm sm:text-base font-bold leading-relaxed">
+                    말씀이 살아있고, 아름다운 성만찬을 나누는 교회,
+                    <br/>청년을 사랑하는 교회, 자연 친화적인 교회,
+                    <br/>함께 기뻐하고 함께 슬퍼하는 믿음 공동체, 
+                    <br/>하늘소리교회로 여러분을 초대합니다.
                   </p>
                 </div>
               </div>

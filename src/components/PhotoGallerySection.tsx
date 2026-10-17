@@ -36,9 +36,8 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
 
   const categories = [
     { id: 'all', label: '전체 사진' },
-    { id: 'worship', label: '주일 예배' },
-    { id: 'fellowship', label: '성도의 교제 & 전경' },
-    { id: 'season', label: '교단 및 특별행사' }
+    { id: 'space', label: '교회 공간' },
+    { id: 'view', label: '주변 풍경' }
   ];
 
   const filteredPhotos = defaultCuratedPhotos.filter((photo) => {
@@ -64,7 +63,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
             하늘소리교회 <span className="text-sky-600">자료실</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
-            교회 행사 일정과 암송 구절, 주보를 한곳에서 확인하실 수 있습니다.
+            교회 행사 일정과 사진, 암송 구절, 주보를 한곳에서 확인하실 수 있습니다.
           </p>
         </div>
 
@@ -176,7 +175,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
                       loading="lazy"
                       onError={(e) => {
                         e.currentTarget.onerror = null;
-                        e.currentTarget.src = `${import.meta.env.BASE_URL}church-main.jpg`;
+                        e.currentTarget.src = `${import.meta.env.BASE_URL}main2.jpg`;
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
