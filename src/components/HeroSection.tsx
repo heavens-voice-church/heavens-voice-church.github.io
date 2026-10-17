@@ -69,14 +69,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               {/* Image Preview */}
               <div className="relative h-72 sm:h-80 lg:h-72 rounded-2xl overflow-hidden bg-cover bg-center">
                 <picture>
-                  <source srcSet={`${import.meta.env.BASE_URL}main2.webp`} type="image/webp" />
+                  <source srcSet={`${import.meta.env.BASE_URL}church-main.webp`} type="image/webp" />
                   <img
-                    src={`${import.meta.env.BASE_URL}main2.jpg`}
-                    alt="김포 하늘소리교회 전경"
-                    width={782}
-                    height={1043}
+                    src={`${import.meta.env.BASE_URL}church-main.jpg`}
+                    alt="김포 하늘소리교회 전경 (수채화)"
+                    width={1600}
+                    height={1195}
                     fetchPriority="high"
-                    className="w-full h-full object-cover object-[center_70%] brightness-95 hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover brightness-95 hover:scale-105 transition-transform duration-700"
                   />
                 </picture>
               </div>

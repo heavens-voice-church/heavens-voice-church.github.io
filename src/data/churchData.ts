@@ -15,8 +15,8 @@ export const churchOfferingAccounts: OfferingAccount[] = [
     bank: '국민은행',
     accountNumber: '535901-01-396982',
     holder: '하늘소리교회',
-    description: '십일조, 감사헌금, 절기헌금 등 모든 헌금을 이 계좌 하나로 온라인 송금하실 수 있습니다.',
-    recommendedFor: ['십일조', '감사헌금', '절기헌금']
+    description: '십일조, 감사헌금 등 모든 헌금을 이 계좌 하나로 온라인 송금하실 수 있습니다.',
+    recommendedFor: ['십일조', '감사헌금', '선교헌금']
   }
 ];
 

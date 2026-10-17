@@ -175,7 +175,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
                       loading="lazy"
                       onError={(e) => {
                         e.currentTarget.onerror = null;
-                        e.currentTarget.src = `${import.meta.env.BASE_URL}main2.jpg`;
+                        e.currentTarget.src = `${import.meta.env.BASE_URL}church-main.jpg`;
                       }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
