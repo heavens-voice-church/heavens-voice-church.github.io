@@ -187,15 +187,6 @@ export const OnlineOfferingSection: React.FC = () => {
                         </div>
                       )}
                     </div>
-
-                    {/* Bottom Guidance Note */}
-                    <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                      <span className="flex items-center gap-1">
-                        <ShieldCheck className="w-3.5 h-3.5 text-sky-500" />
-                        <span>투명하고 정직한 교회 재정 관리</span>
-                      </span>
-                      <span className="text-sky-600 font-semibold">연말정산 소득공제 가능</span>
-                    </div>
                   </div>
                 );
               })}
