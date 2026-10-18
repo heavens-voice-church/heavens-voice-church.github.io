@@ -256,7 +256,7 @@ export const defaultCuratedPhotos: ChurchPhoto[] = [
     title: '하늘소리교회 정면',
     category: 'view',
     categoryLabel: '주변 풍경',
-    url: `${import.meta.env.BASE_URL}gallery/church.png`,
+    url: `${import.meta.env.BASE_URL}gallery/church.jpg`,
     date: '2026.09',
     description: '김포시 월곶면 고막리에 자리한 하늘소리교회의 정면 모습입니다.'
   },
