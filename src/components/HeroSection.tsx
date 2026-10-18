@@ -16,9 +16,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
           <div className="lg:col-span-7 space-y-6 lg:space-y-0 text-left flex flex-col lg:justify-between lg:pb-2.5">
             {/* Eyebrow / Catchphrase / Feature grid spaced by justify-between; badge text, headline and subcopy share one left line (pill shifted by its padding+border) */}
             <div className="inline-flex items-center gap-2">
-              <span className="-ml-[13px] px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-[15px] tracking-wider">
+              {/* <span className="-ml-[13px] px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-700 font-bold text-[15px] tracking-wider">
                 {churchInfo.denomination} · 김포 하늘소리교회
-              </span>
+              </span> */}
             </div>
 
             {/* Main Catchphrase (lg:pb-8 nudges it up toward the badge within justify-between) */}

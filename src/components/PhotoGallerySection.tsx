@@ -11,10 +11,10 @@ import {
 } from './icons';
 
 const archiveTabs = [
-  { id: 'events', label: '교회 행사' },
-  { id: 'photos', label: '사진' },
   { id: 'verses', label: '암송 구절' },
-  { id: 'bulletins', label: '주보' }
+  { id: 'bulletins', label: '주보' },
+  { id: 'photos', label: '사진' },
+  { id: 'events', label: '교회 행사' }
 ] as const;
 
 const EmptyState: React.FC<{ text: string }> = ({ text }) => (
@@ -30,7 +30,7 @@ interface PhotoGallerySectionProps {
 export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
   onSelectPhoto,
 }) => {
-  const [archiveTab, setArchiveTab] = useState<(typeof archiveTabs)[number]['id']>('events');
+  const [archiveTab, setArchiveTab] = useState<(typeof archiveTabs)[number]['id']>('verses');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
@@ -63,7 +63,7 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
             하늘소리교회 <span className="text-sky-600">자료실</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
-            교회 행사 일정과 사진, 암송 구절, 주보를 한곳에서 확인하실 수 있습니다.
+            암송 구절과 주보, 사진, 교회 행사 일정을 한곳에서 확인하실 수 있습니다.
           </p>
         </div>
 

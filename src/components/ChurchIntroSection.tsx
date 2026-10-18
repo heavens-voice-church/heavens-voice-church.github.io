@@ -1,5 +1,5 @@
 import React from 'react';
-import { churchInfo, churchIntro, churchHistory } from '../data/churchData';
+import { churchInfo, churchIntro, churchHistory, churchPrehistory } from '../data/churchData';
 import { ShieldCheck, BookOpen, Calendar } from './icons';
 
 export const ChurchIntroSection: React.FC = () => {
@@ -38,14 +38,32 @@ export const ChurchIntroSection: React.FC = () => {
               <Calendar className="w-5 h-5" />
               <h3 className="text-lg sm:text-xl font-bold text-slate-900">교회 연혁</h3>
             </div>
+            {/* 교회의 전신: smaller, muted timeline above the church's own history */}
+            {churchPrehistory.length > 0 && (
+              <div className="rounded-2xl bg-slate-50 border border-slate-100 px-4 py-3 space-y-2">
+                <p className="text-[11px] font-semibold text-slate-500">교회의 전신</p>
+                <ol className="relative border-l border-dashed border-slate-300 ml-1 space-y-2">
+                  {churchPrehistory.map((h, i) => (
+                    <li key={i} className="pl-4 relative">
+                      <span className="absolute -left-[3.5px] top-1.5 w-1.5 h-1.5 rounded-full bg-slate-400" />
+                      <p className="text-[11px] text-slate-500">
+                        <span className="font-semibold text-slate-600">{h.date}</span> · {h.title}
+                      </p>
+                      {h.note && <p className="text-[11px] text-slate-400 leading-relaxed">{h.note}</p>}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
             {churchHistory.length > 0 ? (
               <ol className="relative border-l-2 border-sky-200 ml-1.5 space-y-4">
                 {churchHistory.map((h, i) => (
                   <li key={i} className="pl-5 relative">
                     <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-sky-500" />
                     <p className="text-xs font-bold text-sky-700">{h.date}</p>
-                    <p className="text-sm text-slate-700">{h.title}</p>
-                    {h.note && <p className="text-xs text-slate-500">{h.note}</p>}
+                    <p className="text-sm font-semibold text-slate-800">{h.title}</p>
+                    {h.note && <p className="text-xs text-slate-500 leading-relaxed whitespace-pre-line mt-0.5">{h.note}</p>}
                   </li>
                 ))}
               </ol>
