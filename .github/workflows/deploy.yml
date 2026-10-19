@@ -33,6 +33,34 @@ jobs:
           VITE_KAKAO_MAP_APP_KEY: ${{ secrets.VITE_KAKAO_MAP_APP_KEY }}
           VITE_PRAYER_ENDPOINT: ${{ secrets.VITE_PRAYER_ENDPOINT }}
 
+      - name: Checkout VerseType web app
+        uses: actions/checkout@v4
+        with:
+          repository: sorrychoe/VerseType
+          ref: main
+          path: _versetype
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: _versetype/package-lock.json
+
+      - run: npm ci
+        working-directory: _versetype
+
+      - run: npm run check && npm run build:web
+        working-directory: _versetype
+
+      - name: Include VerseType at /VerseType/
+        run: |
+          test -f _versetype/dist/index.html
+          test ! -e dist/VerseType
+          cp -R _versetype/dist dist/VerseType
+          printf 'VerseType commit: ' >> "$GITHUB_STEP_SUMMARY"
+          git -C _versetype rev-parse HEAD >> "$GITHUB_STEP_SUMMARY"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
