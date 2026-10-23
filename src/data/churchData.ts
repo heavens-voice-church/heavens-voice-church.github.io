@@ -190,8 +190,6 @@ export const churchInfo: ChurchInfo = {
   address: '경기도 김포시 용강로 100',
   addressDetail: '하늘소리교회',
   postalCode: '10021',
-  phone: '010-9849-2100',
-  email: 'heavensvoicechurch@gmail.com',
   publicTransit: {
     bus: [
       { stopName: '고막리마을회관', walkingTime: '도보 약 5분', note: '교회에서 가장 가까운 정류장' },

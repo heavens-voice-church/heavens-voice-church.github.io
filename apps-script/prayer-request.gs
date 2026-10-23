@@ -19,7 +19,7 @@
  */
 
 const SHEET_NAME = '';          // 비우면 첫 번째 시트 사용
-const NOTIFY_EMAIL = '';        // 예: 'heavensvoicechurch@gmail.com'
+const NOTIFY_EMAIL = '';        // 예: 'church@example.com'
 const CATEGORIES = ['개인', '가정', '교회', '나라', '열방'];
 const VISIBILITIES = ['담임목사만', '중보기도팀'];
 const MAX = { name: 30, contact: 50, content: 2000 };

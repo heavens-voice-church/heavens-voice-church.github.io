@@ -3,28 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSP via meta (GitHub Pages cannot set headers). frame-ancestors is not supported in meta. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://dapi.kakao.com https://t1.kakaocdn.net https://t1.daumcdn.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://dapi.kakao.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
     <title>김포 하늘소리교회 | 기독교대한복음교회</title>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-
-      (function() {
-        var gaMeasurementId = '%VITE_GA_MEASUREMENT_ID%';
-        
-        if (gaMeasurementId && !gaMeasurementId.startsWith('%') && gaMeasurementId.trim() !== '') {
-          var script = document.createElement('script');
-          script.async = true;
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaMeasurementId.trim();
-          document.head.appendChild(script);
-
-          gtag('js', new Date());
-          gtag('config', gaMeasurementId.trim(), {
-            send_page_view: true
-          });
-        }
-      })();
-    </script>
     
     <!-- Primary Meta Tags -->
     <meta name="description" content="김포 하늘소리교회(기독교대한복음교회) 공식 홈페이지입니다. 김포시 월곶면 용강로 100." />
@@ -62,7 +43,7 @@
 
     <!-- Fonts: Pretendard (CDN) & Google Fonts (Noto Serif KR) -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" crossorigin="anonymous" integrity="sha384-ei/b2Mz3F5J8nqTvpKS89CkzDCuD7Cc+/F+OsaPUKItzHgLNKnGq3rjtYq/B7RnO" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
@@ -79,8 +60,6 @@
       "logo": "https://www.heavensvoicechurch.com/icon-512.png",
       "image": "https://www.heavensvoicechurch.com/church-main.jpg",
       "description": "고막리에서 들려오는 아름다운 복음의 소리, 김포 하늘소리교회입니다. 주일 오전 11:00 대예배 및 오후 01:30 소예배.",
-      "telephone": "010-9849-2100",
-      "email": "heavensvoicechurch@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "용강로 100",
@@ -132,7 +111,7 @@
         </ul>
         <h2>교회 위치 및 연락처</h2>
         <p><strong>주소:</strong> 경기도 김포시 용강로 100 하늘소리교회 (우편번호 10021)</p>
-        <p><strong>대표전화:</strong> 010-9849-2100 | <strong>이메일:</strong> heavensvoicechurch@gmail.com</p>
+        <p>연락처는 홈페이지의 "교회 위치" 메뉴에서 확인하실 수 있습니다.</p>
       </div>
     </noscript>
     <div id="root"></div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { churchInfo } from '../data/churchData';
+import { ContactImage } from './ContactImage';
 import { BrandLogo } from './Header';
 import {
   Phone,
@@ -121,11 +122,11 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>대표전화: {churchInfo.phone}</span>
+                <span>대표전화: <ContactImage kind="phone" tone="light" /></span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>이메일: {churchInfo.email}</span>
+                <span>이메일: <ContactImage kind="email" tone="light" /></span>
               </p>
             </div>
           </div>

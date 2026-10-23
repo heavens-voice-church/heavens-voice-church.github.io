@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { churchInfo } from '../data/churchData';
+import { ContactImage, dialChurch, mailChurch } from './ContactImage';
 import {
   MapPin,
   Navigation,
@@ -137,20 +138,21 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
         {/* Church Direct Contact Grid (Prominent Contact Info) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-          {/* 1. Phone: the whole card dials on phones; on md+ the link is inert (pointer-events-none) */}
-          <a
-            href={`tel:${churchInfo.phone.replace(/\D/g, '')}`}
-            className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4 active:bg-sky-50 md:pointer-events-none"
+          {/* 1. Phone: the whole card dials on phones; on md+ it is inert (pointer-events-none) */}
+          <button
+            type="button"
+            onClick={dialChurch}
+            className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4 text-left cursor-pointer active:bg-sky-50 md:pointer-events-none md:cursor-default"
           >
             <div className="w-12 h-12 rounded-xl bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-xs">
               <Phone className="w-5 h-5" />
             </div>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">대표전화 / 목양실</span>
-              <p className="text-base sm:text-lg font-bold text-slate-900">{churchInfo.phone}</p>
+              <p className="text-base sm:text-lg font-bold text-slate-900"><ContactImage kind="phone" /></p>
               <p className="md:hidden text-[11px] text-sky-600 font-medium">터치 시 바로 전화 연결</p>
             </div>
-          </a>
+          </button>
 
           {/* 2. Office Hours */}
           <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 shadow-xs flex items-start gap-4">
@@ -173,12 +175,13 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             </div>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">교회 공식 이메일</span>
-              <a
-                href={`mailto:${churchInfo.email}`}
-                className="block text-xs sm:text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors truncate"
+              <button
+                type="button"
+                onClick={mailChurch}
+                className="block text-xs sm:text-sm font-bold text-slate-900 hover:opacity-80 transition-opacity cursor-pointer max-w-full"
               >
-                {churchInfo.email}
-              </a>
+                <ContactImage kind="email" className="max-w-full" />
+              </button>
               <p className="text-[11px] text-slate-500">서면 문의</p>
             </div>
           </div>
@@ -289,7 +292,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             <div className="p-4 sm:p-5 bg-slate-950 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#FEE500]" />
-                <span>교회사무실: <strong className="text-white">{churchInfo.phone}</strong></span>
+                <span>교회사무실: <ContactImage kind="phone" tone="light" /></span>
               </div>
 
               <a

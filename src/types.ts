@@ -62,8 +62,6 @@ export interface ChurchInfo {
   address: string;
   addressDetail: string;
   postalCode: string;
-  phone: string;
-  email: string;
   publicTransit: {
     subway?: { line: string; station: string; exit: string; walkingTime: string }[];
     bus: { stopName: string; walkingTime: string; note?: string }[];

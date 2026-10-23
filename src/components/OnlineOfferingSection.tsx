@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { churchOfferingAccounts, churchInfo } from '../data/churchData';
+import { ContactImage, dialChurch } from './ContactImage';
 import { OfferingAccount } from '../types';
 import {
   Heart,
@@ -298,14 +299,15 @@ export const OnlineOfferingSection: React.FC = () => {
               <div className="p-5 rounded-2xl bg-sky-50 border border-sky-200 flex items-center justify-between">
                 <div>
                   <span className="text-sm text-sky-700 block font-bold">기부금 영수증 문의 직통</span>
-                  <strong className="text-xs font-semibold text-slate-900">{churchInfo.phone} <br/> (화~금요일 10:00~17:00)</strong>
+                  <strong className="text-xs font-semibold text-slate-900"><ContactImage kind="phone" /> <br/> (화~금요일 10:00~17:00)</strong>
                 </div>
-                <a
-                  href={`tel:${churchInfo.phone}`}
-                  className="md:hidden px-4 py-2 rounded-xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition-colors shadow-xs"
+                <button
+                  type="button"
+                  onClick={dialChurch}
+                  className="md:hidden px-4 py-2 rounded-xl bg-sky-500 text-white text-xs font-bold hover:bg-sky-600 transition-colors shadow-xs cursor-pointer"
                 >
                   전화 연결
-                </a>
+                </button>
               </div>
             </div>
           </div>
