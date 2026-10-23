@@ -122,11 +122,11 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>대표전화: <ContactImage kind="phone" tone="light" /></span>
+                <span className="inline-flex items-center gap-1">대표전화: <ContactImage kind="phone" tone="light" className="relative -top-[0.25px]" /></span>
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>이메일: <ContactImage kind="email" tone="light" /></span>
+                <span className="inline-flex items-center gap-1">이메일: <ContactImage kind="email" tone="light" className="relative -top-[0.25px]" /></span>
               </p>
             </div>
           </div>
