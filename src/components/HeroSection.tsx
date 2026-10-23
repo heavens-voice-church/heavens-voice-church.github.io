@@ -26,6 +26,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               {/* w-fit wrapper = headline width, so the verse reference can right-align to the end of the motto line */}
               <div className="w-fit space-y-2">
               <h1 className="text-[length:min(1.875rem,calc((100vw-2rem)/12.6))] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.5rem] font-bold tracking-tighter text-slate-900 leading-[1.25]">
+                <span className="sr-only">김포 하늘소리교회 </span>
                 <span className="font-serif-kr">
                   <span className="text-[length:calc(1em-2px)]">은혜의 50년</span><br />
                   {/* opening quote hangs into the left gutter so "하" sits on the shared left line */}
