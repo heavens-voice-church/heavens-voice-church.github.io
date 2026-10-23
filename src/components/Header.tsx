@@ -127,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({
               href="/bible-ai/"
               className="px-3 py-2 rounded-xl text-xs xl:text-sm font-semibold transition-all whitespace-nowrap text-sky-600 hover:bg-sky-50"
             >
-              AI 말씀 추천
+              성경 말씀 추천
             </a>
           </div>
 
@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({
                 href="/bible-ai/"
                 className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all text-left bg-sky-50 text-sky-700 hover:bg-sky-100 border border-sky-200"
               >
-                <span>AI 말씀 추천</span>
+                <span>성경 말씀 추천</span>
                 <ChevronRight className="w-3.5 h-3.5 text-sky-400" />
               </a>
             </div>
