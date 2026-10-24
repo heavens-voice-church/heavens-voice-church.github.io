@@ -149,7 +149,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
             </div>
             <div className="space-y-1 text-left min-w-0">
               <span className="text-xs font-semibold text-slate-500">대표전화 / 목양실</span>
-              <p className="text-base sm:text-lg font-bold text-slate-900"><ContactImage kind="phone" /></p>
+              <p className="text-sm font-bold text-slate-900"><ContactImage kind="phone" /></p>
               <p className="md:hidden text-[11px] text-sky-600 font-medium">터치 시 바로 전화 연결</p>
             </div>
           </button>
@@ -178,7 +178,7 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
               <button
                 type="button"
                 onClick={mailChurch}
-                className="block text-xs sm:text-sm font-bold text-slate-900 hover:opacity-80 transition-opacity cursor-pointer max-w-full"
+                className="block text-sm font-bold text-slate-900 hover:opacity-80 transition-opacity cursor-pointer max-w-full"
               >
                 <ContactImage kind="email" className="max-w-full" />
               </button>
