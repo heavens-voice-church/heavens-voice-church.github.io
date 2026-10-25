@@ -28,15 +28,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           {/* Brand Info (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <BrandLogo dark />
-
-            <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              "{churchInfo.slogan}"
-            </p>
-
             <div className="flex flex-wrap items-center gap-2 text-xs pt-1">
-              <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 font-medium text-sky-300">
-                {churchInfo.denomination}
-              </span>
               <span className="px-2.5 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-300">
                 {churchInfo.domainName}
               </span>

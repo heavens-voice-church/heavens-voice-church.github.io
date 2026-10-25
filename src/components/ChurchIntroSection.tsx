@@ -103,7 +103,7 @@ export const ChurchIntroSection: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-[7rem_1fr] gap-1 sm:gap-4 py-4 last:pb-0">
                 <dt className="font-bold text-sky-700">소속 협의체</dt>
                 <dd className="text-slate-600 leading-relaxed">
-                  한국기독교교회협의회(NCCK) 및 아시아기독교협의회(CCA)의 정식 회원 교단입니다.
+                  한국기독교교회협의회(NCCK)의 정식 회원 교단입니다.
                 </dd>
               </div>
             </dl>

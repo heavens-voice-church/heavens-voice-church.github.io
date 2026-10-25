@@ -1,6 +1,6 @@
 import React from 'react';
 import { churchInfo, churchOfficers } from '../data/churchData';
-import { Quote, GraduationCap, Users } from './icons';
+import { Users } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (
@@ -57,10 +57,6 @@ export const PastorSection: React.FC = () => {
             <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 lg:pl-4 flex flex-col justify-between space-y-6">
               <div className="space-y-4 text-left">
                 <div className="flex items-center gap-2 text-sky-400">
-                  <Quote className="w-5 h-5 rotate-180 opacity-90 text-sky-400" />
-                  <span className="text-xs font-semibold uppercase tracking-widest text-sky-300">
-                    담임목사 인사말
-                  </span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
@@ -88,7 +84,6 @@ export const PastorSection: React.FC = () => {
               <div className="pt-6 border-t border-slate-700/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-left">
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-xs text-sky-300 font-semibold">
-                    <GraduationCap className="w-4 h-4 text-sky-400" />
                     <span>담임목사 소개</span>
                   </div>
                   <ul className="text-xs text-slate-300 space-y-0.5">

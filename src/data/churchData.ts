@@ -26,7 +26,7 @@ export const yearMotto = {
   title: '은혜의 50년',
   motto: '하늘소리, 세상의 빛이어라',
   verse: '',
-  reference: '마태복음 5:14'
+  reference: '마태복음 5:16'
 };
 
 // 교회 소개글
@@ -62,7 +62,6 @@ export const churchHistory: ChurchEvent[] = [
   { date: '1993년 7월', title: '제4대 나성국 목사 (1993 ~ 1998)', note: '1995년 6월 채영규 전도사 시무 / 1996년 11월 황준하 전도사 시무' },
   { date: '1998년 10월', title: '제5대 송관민 목사 (1998 ~ 2004)' },
   { date: '2005년 1월', title: '제6대 오충일 목사 (2005 ~ 2011)' },
-  // { date: '2005년 7월 17일', title: '창립 29주년 기념 예배 · 임직' },
   { date: '2006년 5월', title: '김포시 월곶면 용강로 100으로 이전' },
   { date: '2006년 7월 17일', title: '창립 30주년 예배' },
   { date: '2012년 1월', title: '김영일 목사 설교 (2012 ~ 2020)' },
@@ -79,7 +78,6 @@ export const churchEvents2026: ChurchEvent[] = [
   { date: '1월 4일', title: '신년예배 / 유숙연 담임목사 부임' },
   { date: '2월 8일', title: '유숙연 목사 위임감사예배' },
   { date: '2월 18일', title: '재의 수요일', note: '사순절 시작' },
-  { date: '3월 1주', title: '오후 1시 30분 예배 시작' },
   { date: '3월 4주', title: '만남의 주일 시작' },
   { date: '4월 3일', title: '성금요일', note: '3월 30일 ~ 4월 4일 고난주간' },
   { date: '4월 5일', title: '부활주일 (기쁨의 50일 시작)', note: '오후: 찬양사역자 초청 집회' },
@@ -164,8 +162,6 @@ export const churchInfo: ChurchInfo = {
   name: '하늘소리교회',
   englishName: "Heaven's voice Church",
   domainName: 'www.heavensvoicechurch.com',
-  slogan: '신앙은 복음적이고, 생명은 풍성하며, 삶은 거룩하게',
-  subSlogan: '기독교대한복음교회 교단 정신에 따라 오직 성경과 복음의 진리 위에 서는 교회',
   denomination: '기독교대한복음교회',
   pastor: {
     name: '유숙연',
@@ -173,15 +169,11 @@ export const churchInfo: ChurchInfo = {
     education: [
       '(현) 기독교대한복음교회 하늘소리교회 담임목사',
       '(현) 한국임상목회교육협회(KCPE) 수퍼바이저',
-      '(현) 한국목회상담협회(KAPC) 상담사, 소울프렌드 소속 상담사',
       '(현) 목회자유가족협의회 이사',
-      '(현) 하늘봄 센터 대표',
       '(전) 연세의료원 신촌세브란스병원 원목실 목사',
-      '(전) (주)쓰리제이 사목',
       '(전) 수원성교회 새가족부 총괄목사, 싱글여성사역 담당목사',
-      '이화여자대학교 신학대학원 졸업(Th.M)',
     ],
-    photoUrl: `${import.meta.env.BASE_URL}pastor.jpg`, // 비우면 "사진 첨부 예정" 표시 (원본: archive/pastor.png)
+    photoUrl: `${import.meta.env.BASE_URL}pastor.jpg`,
     bibleVerse: {
       verse: '기뻐하는 사람들과 함께 기뻐하고, 우는 사람들과 함께 우십시오',
       reference: '로마서 12장 15절(새번역)'

@@ -1,6 +1,5 @@
 import React from 'react';
 import { churchInfo, getWorshipTimeLabel, yearMotto } from '../data/churchData';
-import { BookOpen } from './icons';
 
 interface HeroSectionProps {
   onNavigate: (sectionId: string) => void;
@@ -84,17 +83,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
               {/* Pastor Bible Verse Bottom Box */}
               <div className="px-4 py-3 text-left space-y-2 bg-white rounded-2xl mt-2.5 border border-slate-200">
-                <div className="flex items-center text-xs">
-                  <span className="font-bold text-sky-600 flex items-center gap-1.5 uppercase tracking-wider">
-                    <BookOpen className="w-3.5 h-3.5" />
-                    교회 묵상 말씀
-                  </span>
-                </div>
-                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed italic">
+                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed">
                   "{churchInfo.pastor.bibleVerse.verse}"
                 </p>
-                <div className="pt-1.5 border-t border-slate-100 text-xs flex items-center justify-between">
-                  <span className="text-slate-600 text-sm">담임목사 : <strong className="text-slate-900 font-bold">{churchInfo.pastor.name}</strong></span>
+                <div className="pt-1.5 border-t border-slate-100 text-xs flex items-center justify-end">
                   <span className="text-slate-500 text-[9px]">{churchInfo.pastor.bibleVerse.reference}</span>
                 </div>
               </div>

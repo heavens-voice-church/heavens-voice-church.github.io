@@ -55,8 +55,6 @@ export interface ChurchInfo {
   name: string;
   englishName: string;
   domainName: string;
-  slogan: string;
-  subSlogan: string;
   denomination: string;
   pastor: PastorInfo;
   address: string;
