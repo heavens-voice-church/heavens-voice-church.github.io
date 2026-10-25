@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               {/* 2026 motto verse */}
               <p className="flex flex-wrap items-baseline justify-between gap-x-3 font-serif-kr text-sky-700 text-base sm:text-lg">
                 <span>{yearMotto.verse}</span>
-                <span className="ml-auto text-slate-500 text-sm">({yearMotto.reference})</span>
+                <span className="ml-auto text-slate-500 text-base">({yearMotto.reference})</span>
               </p>
               </div>
               <p className="text-slate-600 text-base sm:text-lg max-w-2xl font-light leading-relaxed">
@@ -83,11 +83,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
               {/* Pastor Bible Verse Bottom Box */}
               <div className="px-4 py-3 text-left space-y-2 bg-white rounded-2xl mt-2.5 border border-slate-200">
-                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed">
+                <p className="text-slate-800 text-xs sm:text-sm leading-relaxed font-bold">
                   "{churchInfo.pastor.bibleVerse.verse}"
                 </p>
                 <div className="pt-1.5 border-t border-slate-100 text-xs flex items-center justify-end">
-                  <span className="text-slate-500 text-[9px]">{churchInfo.pastor.bibleVerse.reference}</span>
+                  <span className="text-slate-500 text-[11px]">{churchInfo.pastor.bibleVerse.reference}</span>
                 </div>
               </div>
             </div>
