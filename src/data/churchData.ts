@@ -86,7 +86,7 @@ export const churchEvents2026: ChurchEvent[] = [
   { date: '5월 31일', title: '연합예배', note: '여은감리교회 (담임목사: 장훈태)' },
   { date: '7월 12일', title: '교회창립 50주년 기념주일' },
   { date: '10월 25일', title: '종교개혁 기념주일' },
-  { date: '11월 15일', title: '추수감사주일' },
+  { date: '11월 1일', title: '추수감사주일' },
   { date: '11월 29일', title: '대림절 시작' },
   { date: '12월 25일', title: '성탄절' },
   { date: '12월 31일', title: '송구영신' }
