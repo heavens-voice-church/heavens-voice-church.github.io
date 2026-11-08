@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, ShieldCheck, Check } from './icons';
+import { ShieldCheck, Check } from './icons';
 
 // Google Apps Script web app URL (see apps-script/prayer-request.gs). Empty → form shows "준비 중".
 const ENDPOINT = import.meta.env.VITE_PRAYER_ENDPOINT;
@@ -53,15 +53,11 @@ export const PrayerRequestSection: React.FC = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         {/* Section Header */}
         <div className="text-center space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold">
-            <Heart className="w-3.5 h-3.5 text-sky-500" />
-            <span>함께 기도합니다</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            <span className="text-sky-600">중보기도</span> 요청
+            기도제목을 남겨주세요.
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
-            기도가 필요한 제목을 남겨 주세요. 하늘소리교회가 마음을 모아 함께 기도하겠습니다.
+            마음 모아 함께 기도하겠습니다.
           </p>
         </div>
 

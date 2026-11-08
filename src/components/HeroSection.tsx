@@ -87,7 +87,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   "{churchInfo.pastor.bibleVerse.verse}"
                 </p>
                 <div className="pt-1.5 border-t border-slate-100 text-xs flex items-center justify-end">
-                  <span className="text-slate-500 text-[11px]">{churchInfo.pastor.bibleVerse.reference}</span>
+                  <span className="text-slate-500 text-[11px] font-bold">{churchInfo.pastor.bibleVerse.reference}</span>
                 </div>
               </div>
             </div>

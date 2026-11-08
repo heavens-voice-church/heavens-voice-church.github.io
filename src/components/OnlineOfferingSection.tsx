@@ -3,7 +3,6 @@ import { churchOfferingAccounts, churchInfo } from '../data/churchData';
 import { ContactImage, dialChurch } from './ContactImage';
 import { OfferingAccount } from '../types';
 import {
-  Heart,
   Copy,
   Check,
   CreditCard,
@@ -48,12 +47,8 @@ export const OnlineOfferingSection: React.FC = () => {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <Heart className="w-3.5 h-3.5 text-sky-500" />
-            <span>정성과 감사의 봉헌</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            하늘소리교회 <span className="text-sky-600">온라인 헌금 안내</span>
+             헌금 안내
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             "각각 그 마음에 정한 대로 할 것이요 인색함으로나 억지로 하지 말지니 하나님은 즐겨 내는 자를 사랑하시느니라"<br/> (고린도후서 9장 7절)
@@ -174,7 +169,7 @@ export const OnlineOfferingSection: React.FC = () => {
                       </div>
 
                       {/* Recommended Tags */}
-                      {acc.recommendedFor && (
+                      {/* {acc.recommendedFor && (
                         <div className="flex flex-wrap items-center gap-1.5 pt-1">
                           <span className="text-[11px] text-slate-400">해당 헌금:</span>
                           {acc.recommendedFor.map((tag, tIdx) => (
@@ -186,7 +181,7 @@ export const OnlineOfferingSection: React.FC = () => {
                             </span>
                           ))}
                         </div>
-                      )}
+                      )} */}
                     </div>
                   </div>
                 );
@@ -199,7 +194,7 @@ export const OnlineOfferingSection: React.FC = () => {
                 <Info className="w-4 h-4 text-sky-500" />
                 <span>온라인 헌금 송금 시 유의사항</span>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-600">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
                 <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1">
                   <strong className="text-slate-900 block font-bold">1. 입금자명 표기 원칙</strong>
                   <p>
@@ -207,13 +202,7 @@ export const OnlineOfferingSection: React.FC = () => {
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <strong className="text-slate-900 block font-bold">2. 동명이인 확인</strong>
-                  <p>
-                    동명이인 구분을 위해 필요 시 생년월일 앞자리를 <br/>병기하실 수 있습니다. (예: <em>홍길동85십</em>)
-                  </p>
-                </div>
-                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1">
-                  <strong className="text-slate-900 block font-bold">3. 기부금 영수증 발급</strong>
+                  <strong className="text-slate-900 block font-bold">2. 기부금 영수증 발급</strong>
                   <p>
                     교적에 등록된 성도명으로 송금 시 연말정산 기부금영수증이 자동으로 국세청 홈택스에 연동됩니다.
                   </p>

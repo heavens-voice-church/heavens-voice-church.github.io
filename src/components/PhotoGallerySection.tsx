@@ -6,7 +6,6 @@ import {
   Search,
   Maximize2,
   Calendar,
-  FolderOpen,
   ExternalLink
 } from './icons';
 
@@ -55,16 +54,12 @@ export const PhotoGallerySection: React.FC<PhotoGallerySectionProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <FolderOpen className="w-3.5 h-3.5 text-sky-500" />
-            <span>하늘소리 자료실</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회 <span className="text-sky-600">자료실</span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
+          {/* <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
             암송 구절과 주보, 사진, 교회 행사 일정을 한곳에서 확인하실 수 있습니다.
-          </p>
+          </p> */}
         </div>
 
         {/* Archive Sub-Tabs */}

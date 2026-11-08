@@ -126,10 +126,6 @@ export const LocationSection: React.FC<LocationSectionProps> = ({ isActive }) =>
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <MapPin className="w-3.5 h-3.5 text-sky-500" />
-            <span>오시는 길 & 교회 연락처</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             하늘소리교회 <span className="text-sky-600">찾아오시는 길 & 연락처</span>
           </h2>

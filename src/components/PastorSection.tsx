@@ -1,6 +1,5 @@
 import React from 'react';
 import { churchInfo, churchOfficers } from '../data/churchData';
-import { Users } from './icons';
 
 export const PastorSection: React.FC = () => {
   return (
@@ -9,16 +8,9 @@ export const PastorSection: React.FC = () => {
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <Users className="w-3.5 h-3.5 text-sky-500" />
-            <span>함께 섬기는 공동체</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            하늘소리교회를 <span className="text-sky-600">섬기는 사람들</span>
+            우리 교회를 찾아주신 여러분을 환영합니다.
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed break-keep">
-            말씀과 기도로 하늘소리교회 공동체를 세우고 섬기는 사람들을 소개합니다.
-          </p>
         </div>
 
         {/* Pastor Main Profile Card */}
@@ -56,28 +48,27 @@ export const PastorSection: React.FC = () => {
             {/* Right: Greeting & Scripture */}
             <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 lg:pl-4 flex flex-col justify-between space-y-6">
               <div className="space-y-4 text-left">
-                <div className="flex items-center gap-2 text-sky-400">
+                <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold tracking-wider">
+                  <span>담임목사 인사말</span>
                 </div>
+                <p className="text-slate-100 text-base sm:text-lg leading-loose break-keep">
+                  하늘소리교회는 교회의 본래적 의미를 잃어가는 교권주의와 제도화를 경계하고, 말씀을 중심으로
+                  그리스도의 십자가와 부활, 다시 오실 주님을 힘써 전하며 주님의 사랑을 삶 속에서 실천하고자 애쓰는
+                  거룩한 공동체입니다.
+                </p>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-white leading-snug">
-                  "우리 교회를 찾아주신 성도님들과 방문자 여러분을 환영합니다."
-                </h3>
-
-                <div className="space-y-3 text-slate-300 text-sm sm:text-base font-light leading-relaxed">
-                  <p>하늘소리교회는 교회의 본래적 의미를 잃어가는 교권주의와 제도화를 경계하고, 말씀을 중심으로 
-                    <br/>그리스도의 십자가와 부활, 다시 오실 주님을 힘써 전하며 주님의 사랑을 삶 속에서 실천하고자 애쓰는 
-                    <br/>거룩한 공동체입니다.</p>
-                </div>
-
-                {/* Invitation (in the box that used to hold 목회 성구) */}
-                <div className="p-4 rounded-xl bg-sky-950/60 border border-sky-700/50 mt-4">
-                  <p className="text-sky-50 text-sm sm:text-base font-bold leading-relaxed">
+                <div className="pl-5 border-l-4 border-sky-400 mt-6">
+                  <p className="text-sky-100 text-base sm:text-lg font-bold leading-loose break-keep">
                     말씀이 살아있고, 아름다운 성만찬을 나누는 교회,
-                    <br/>청년을 사랑하는 교회, 자연 친화적인 교회,
-                    <br/>함께 기뻐하고 함께 슬퍼하는 믿음 공동체, 
-                    <br/>하늘소리교회로 여러분을 초대합니다.
+                    <br className="hidden sm:inline" />청년을 사랑하는 교회, 자연 친화적인 교회,
+                    <br className="hidden sm:inline" />함께 기뻐하고 함께 슬퍼하는 믿음 공동체,
+                    <br className="hidden sm:inline" /><span className="text-sky-300">하늘소리교회</span>로 여러분을 초대합니다.
                   </p>
                 </div>
+
+                <p className="text-right text-slate-300 text-sm sm:text-base pt-2">
+                  하늘소리교회 담임목사 <strong className="text-white text-lg sm:text-xl ml-1">{churchInfo.pastor.name}</strong>
+                </p>
               </div>
 
               {/* Pastor Education / Ordination */}

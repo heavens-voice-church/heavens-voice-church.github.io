@@ -8,12 +8,8 @@ export const ChurchIntroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider">
-            <ShieldCheck className="w-4 h-4 text-sky-500" />
-            <span>{churchInfo.denomination} {churchInfo.name}</span>
-          </div>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            교회 소개
+            하늘소리교회를 소개합니다
           </h2>
         </div>
 
@@ -23,7 +19,7 @@ export const ChurchIntroSection: React.FC = () => {
           <div className="bg-white border border-slate-200 rounded-3xl p-8 space-y-5 shadow-xs">
             <div className="flex items-center gap-2 text-sky-600">
               <BookOpen className="w-5 h-5" />
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900">하늘소리교회를 소개합니다</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900">하늘소리교회는?</h3>
             </div>
             <div className="space-y-3 text-sm sm:text-base text-slate-600 leading-relaxed break-keep">
               {churchIntro.paragraphs.map((p, i) => (
