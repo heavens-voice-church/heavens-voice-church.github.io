@@ -16,9 +16,6 @@ export const WorshipScheduleSection: React.FC = () => {
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-slate-900">
             예배 시간표
           </h2>
-          {/* <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            하늘소리교회는 매주 <strong className="text-sky-700">주일 오전 예배</strong>와 <strong className="text-sky-700">주일 오후 예배</strong>로 하나님께 온전한 찬양과 영광을 올려드립니다.
-          </p> */}
         </div>
 
         {/* 2 Main Sunday Worship Services Grid */}
@@ -34,9 +31,9 @@ export const WorshipScheduleSection: React.FC = () => {
               <div className="space-y-5">
                 {/* Header Badge */}
                 <div className="flex items-center justify-between">
-                  <span className="text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider bg-sky-50 text-sky-700 border border-sky-200">
+                  {/* <span className="text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider bg-sky-50 text-sky-700 border border-sky-200">
                     {idx === 0 ? '주일 대예배' : '주일 찬양예배'}
-                  </span>
+                  </span> */}
                 </div>
 
                 {/* Name & Time */}
