@@ -49,7 +49,7 @@ export const PastorSection: React.FC = () => {
             <div className="lg:col-span-8 p-8 sm:p-10 lg:p-12 lg:pl-4 flex flex-col justify-between space-y-6">
               <div className="space-y-4 text-left">
                 <div className="flex items-center gap-2 text-sky-400 text-xs font-semibold tracking-wider">
-                  <span>담임목사 인사말</span>
+                  <span>인사말</span>
                 </div>
                 <p className="text-slate-100 text-base sm:text-lg leading-loose break-keep">
                   하늘소리교회는 교회의 본래적 의미를 잃어가는 교권주의와 제도화를 경계하고, 말씀을 중심으로
